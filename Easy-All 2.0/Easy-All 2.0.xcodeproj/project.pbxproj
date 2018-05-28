@@ -17,6 +17,7 @@
 /* Begin PBXFileReference section */
 		501EED3520B6E04D003FAD06 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		501EED3620B6E04D003FAD06 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		5028619820BC34D7006EABBA /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		50448CEB20B6DD0700E4FFD0 /* Easy-All 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy-All 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50448CEE20B6DD0700E4FFD0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		50448CEF20B6DD0700E4FFD0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -82,6 +83,7 @@
 				501EED3420B6E033003FAD06 /* Main */,
 				50448CEE20B6DD0700E4FFD0 /* AppDelegate.h */,
 				50448CEF20B6DD0700E4FFD0 /* AppDelegate.m */,
+				5028619820BC34D7006EABBA /* PrefixHeader.pch */,
 				50448CF720B6DD0700E4FFD0 /* Assets.xcassets */,
 				50448CFC20B6DD0700E4FFD0 /* Info.plist */,
 				50448CFD20B6DD0700E4FFD0 /* main.m */,
@@ -310,6 +312,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = BT9788MKNS;
+				GCC_PREFIX_HEADER = "Easy-All 2.0/PrefixHeader.pch";
 				INFOPLIST_FILE = "Easy-All 2.0/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -329,6 +332,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				GCC_PREFIX_HEADER = "Easy-All 2.0/PrefixHeader.pch";
 				INFOPLIST_FILE = "Easy-All 2.0/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
