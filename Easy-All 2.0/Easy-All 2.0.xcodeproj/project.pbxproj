@@ -10,7 +10,6 @@
 		501EED3720B6E04D003FAD06 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 501EED3620B6E04D003FAD06 /* MainViewController.m */; };
 		50448CF020B6DD0700E4FFD0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50448CEF20B6DD0700E4FFD0 /* AppDelegate.m */; };
 		50448CF820B6DD0700E4FFD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50448CF720B6DD0700E4FFD0 /* Assets.xcassets */; };
-		50448CFB20B6DD0700E4FFD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50448CF920B6DD0700E4FFD0 /* LaunchScreen.storyboard */; };
 		50448CFE20B6DD0700E4FFD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50448CFD20B6DD0700E4FFD0 /* main.m */; };
 		9057B2D420CA5C103DC0D081 /* libPods-Easy-All 2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F940BCCFA6EEE85C79177D88 /* libPods-Easy-All 2.0.a */; };
 /* End PBXBuildFile section */
@@ -22,7 +21,6 @@
 		50448CEE20B6DD0700E4FFD0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		50448CEF20B6DD0700E4FFD0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		50448CF720B6DD0700E4FFD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		50448CFA20B6DD0700E4FFD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50448CFC20B6DD0700E4FFD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50448CFD20B6DD0700E4FFD0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		714641612C3BD83443100705 /* Pods-Easy-All 2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy-All 2.0.release.xcconfig"; path = "Pods/Target Support Files/Pods-Easy-All 2.0/Pods-Easy-All 2.0.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,7 +83,6 @@
 				50448CEE20B6DD0700E4FFD0 /* AppDelegate.h */,
 				50448CEF20B6DD0700E4FFD0 /* AppDelegate.m */,
 				50448CF720B6DD0700E4FFD0 /* Assets.xcassets */,
-				50448CF920B6DD0700E4FFD0 /* LaunchScreen.storyboard */,
 				50448CFC20B6DD0700E4FFD0 /* Info.plist */,
 				50448CFD20B6DD0700E4FFD0 /* main.m */,
 			);
@@ -159,7 +156,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50448CFB20B6DD0700E4FFD0 /* LaunchScreen.storyboard in Resources */,
 				50448CF820B6DD0700E4FFD0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,17 +195,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		50448CF920B6DD0700E4FFD0 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				50448CFA20B6DD0700E4FFD0 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		50448CFF20B6DD0700E4FFD0 /* Debug */ = {
@@ -321,6 +306,7 @@
 			baseConfigurationReference = A7F6158C0B0C30697B3DD5AE /* Pods-Easy-All 2.0.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = BT9788MKNS;
@@ -340,6 +326,7 @@
 			baseConfigurationReference = 714641612C3BD83443100705 /* Pods-Easy-All 2.0.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Easy-All 2.0/Info.plist";
