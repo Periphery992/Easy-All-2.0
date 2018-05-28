@@ -346,15 +346,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = BT9788MKNS;
 				GCC_PREFIX_HEADER = "Easy-All 2.0/PrefixHeader.pch";
 				INFOPLIST_FILE = "Easy-All 2.0/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ernitec.Ernitec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "f0cdeeb4-bdc9-451a-bc0d-ac00a26bbe81";
+				PROVISIONING_PROFILE_SPECIFIER = Ernitec_ADHoc;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
