@@ -10,6 +10,16 @@
 
 @implementation MainTypeBean
 
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{@"mainToolList":@"list"};
+}
+
++ (NSDictionary *)mj_objectClassInArray
+{
+    return @{@"mainToolList":@"MainToolBean"};
+}
+
 
 
 @end

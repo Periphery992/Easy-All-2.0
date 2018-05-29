@@ -7,10 +7,12 @@
 //
 
 #import "MainViewController.h"
+#import "MainManager.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableview;
-@property (nonatomic, strong) NSMutableArray *mainListArrays;
+@property (nonatomic, strong) MainManager *mainManager;
+
 @end
 
 @implementation MainViewController
@@ -19,27 +21,51 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.view addSubview:self.tableview];
+    self.mainManager = [[MainManager alloc] init];
     
-    [self getData];
+    [self.view addSubview:self.tableview];
     [self setDefaultConstraints];
 }
 
 #pragma mark - Delegate Methods
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return [self.mainManager getTypeCount];
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.mainManager getToolsCountWithTypeIndex:section];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *mainListCell = @"mainListCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:mainListCell];
+    
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:mainListCell];
+        
+        MainToolBean *bean = [self.mainManager getMainToolBeanWithIndexPath:indexPath];
+        
+        cell.textLabel.text = bean.name;
+    }
+    
+    return cell;
+    
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    
+}
 
 #pragma mark - Public Methods
 
 #pragma mark - Private Methods
-- (void)getData
-{
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"MainList.plist" ofType:nil];
-    self.mainListArrays = [NSMutableArray arrayWithContentsOfFile:path];
-}
 
 #pragma mark - Layout Methods
 - (void)updateViewConstraints
@@ -60,32 +86,17 @@
 
 - (UITableView *)tableview
 {
-    if (_tableview)
+    if (!_tableview)
     {
         _tableview = ({
             UITableView *tableview = [[UITableView alloc]init];
             tableview.dataSource = self;
             tableview.delegate = self;
             tableview.tableFooterView = [[UIView alloc]init];
-            tableview.backgroundColor = [UIColor redColor];
             tableview;
         });
     }
     return _tableview;
-}
-
-- (NSMutableArray *)mainListArrays
-{
-    if (_mainListArrays)
-    {
-        _mainListArrays = ({
-            
-            NSMutableArray *mainListArrays = [[NSMutableArray alloc]init];
-            mainListArrays;
-        });
-    }
-    return _mainListArrays;
-    
 }
 
 

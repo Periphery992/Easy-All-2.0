@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface MainToolBean : NSObject
+@property (nonatomic, copy) NSString *name;
 
 @end

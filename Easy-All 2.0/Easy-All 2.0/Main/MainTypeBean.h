@@ -12,6 +12,6 @@
 @interface MainTypeBean : NSObject
 
 @property (nonatomic, copy) NSString *type;
-@property (nonatomic, strong) NSMutableArray<MainToolBean *> *mainToolBean;
+@property (nonatomic, strong) NSMutableArray<MainToolBean *> *mainToolList;
 
 @end
