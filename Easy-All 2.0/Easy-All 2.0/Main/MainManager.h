@@ -35,5 +35,14 @@
  */
 - (MainToolBean *)getMainToolBeanWithIndexPath:(NSIndexPath *)indexPath;
 
+/**
+ 通过类别序号获取该类别名称
+
+ @param index 类别序号
+ @return 类别名称
+ */
+- (NSString *)getTypeWithTypeIndex:(NSInteger)index;
+
+
 
 @end

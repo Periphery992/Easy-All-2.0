@@ -10,6 +10,8 @@
 			<dict>
 				<key>name</key>
 				<string>GCD</string>
+				<key>viewController</key>
+				<string>GCDViewController</string>
 			</dict>
 		</array>
 	</dict>
@@ -21,6 +23,8 @@
 			<dict>
 				<key>name</key>
 				<string>tools1</string>
+				<key>viewController</key>
+				<string>GCDViewController</string>
 			</dict>
 		</array>
 	</dict>

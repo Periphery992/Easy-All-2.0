@@ -38,6 +38,11 @@
     return [self.mainManager getToolsCountWithTypeIndex:section];
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return [self.mainManager getTypeWithTypeIndex:section];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *mainListCell = @"mainListCell";
@@ -60,6 +65,10 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    MainToolBean *bean = [self.mainManager getMainToolBeanWithIndexPath:indexPath];
+    
+    UIViewController *vc = [[NSClassFromString(bean.viewController) alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 

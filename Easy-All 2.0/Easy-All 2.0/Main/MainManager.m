@@ -21,6 +21,13 @@
     return bean.mainToolList.count;
 }
 
+- (NSString *)getTypeWithTypeIndex:(NSInteger)index
+{
+    MainTypeBean *typeBean = self.mainListArrays[index];
+    
+    return typeBean.type;
+}
+
 - (MainToolBean *)getMainToolBeanWithIndexPath:(NSIndexPath *)indexPath
 {
     MainTypeBean *typeBean = self.mainListArrays[indexPath.section];
