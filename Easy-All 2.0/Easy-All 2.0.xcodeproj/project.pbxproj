@@ -15,6 +15,7 @@
 		50448CF820B6DD0700E4FFD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50448CF720B6DD0700E4FFD0 /* Assets.xcassets */; };
 		50448CFE20B6DD0700E4FFD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50448CFD20B6DD0700E4FFD0 /* main.m */; };
 		551BB02520BDBB520004E55B /* MainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 551BB02420BDBB520004E55B /* MainManager.m */; };
+		551BB04B20BDC9F30004E55B /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551BB04A20BDC9F30004E55B /* GCDViewController.m */; };
 		9057B2D420CA5C103DC0D081 /* libPods-Easy-All 2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F940BCCFA6EEE85C79177D88 /* libPods-Easy-All 2.0.a */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,8 @@
 		50448CFD20B6DD0700E4FFD0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		551BB02320BDBB520004E55B /* MainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainManager.h; sourceTree = "<group>"; };
 		551BB02420BDBB520004E55B /* MainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainManager.m; sourceTree = "<group>"; };
+		551BB04920BDC9F30004E55B /* GCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
+		551BB04A20BDC9F30004E55B /* GCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
 		714641612C3BD83443100705 /* Pods-Easy-All 2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy-All 2.0.release.xcconfig"; path = "Pods/Target Support Files/Pods-Easy-All 2.0/Pods-Easy-All 2.0.release.xcconfig"; sourceTree = "<group>"; };
 		A7F6158C0B0C30697B3DD5AE /* Pods-Easy-All 2.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy-All 2.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Easy-All 2.0/Pods-Easy-All 2.0.debug.xcconfig"; sourceTree = "<group>"; };
 		F940BCCFA6EEE85C79177D88 /* libPods-Easy-All 2.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Easy-All 2.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +101,7 @@
 		50448CED20B6DD0700E4FFD0 /* Easy-All 2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				551BB04820BDC9E90004E55B /* GCD */,
 				501EED3420B6E033003FAD06 /* Main */,
 				50448CEE20B6DD0700E4FFD0 /* AppDelegate.h */,
 				50448CEF20B6DD0700E4FFD0 /* AppDelegate.m */,
@@ -107,6 +111,15 @@
 				50448CFD20B6DD0700E4FFD0 /* main.m */,
 			);
 			path = "Easy-All 2.0";
+			sourceTree = "<group>";
+		};
+		551BB04820BDC9E90004E55B /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				551BB04920BDC9F30004E55B /* GCDViewController.h */,
+				551BB04A20BDC9F30004E55B /* GCDViewController.m */,
+			);
+			path = GCD;
 			sourceTree = "<group>";
 		};
 		83266495931E1BBAE607A81D /* Frameworks */ = {
@@ -213,6 +226,7 @@
 				501EED3720B6E04D003FAD06 /* MainViewController.m in Sources */,
 				551BB02520BDBB520004E55B /* MainManager.m in Sources */,
 				502861A020BC350E006EABBA /* MainTypeBean.m in Sources */,
+				551BB04B20BDC9F30004E55B /* GCDViewController.m in Sources */,
 				5028619E20BC350E006EABBA /* MainToolBean.m in Sources */,
 				50448CF020B6DD0700E4FFD0 /* AppDelegate.m in Sources */,
 			);
