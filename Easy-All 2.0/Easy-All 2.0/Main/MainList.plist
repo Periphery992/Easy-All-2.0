@@ -13,6 +13,12 @@
 				<key>viewController</key>
 				<string>GCDViewController</string>
 			</dict>
+			<dict>
+				<key>name</key>
+				<string>KVO</string>
+				<key>viewController</key>
+				<string>KVOViewController</string>
+			</dict>
 		</array>
 	</dict>
 	<dict>

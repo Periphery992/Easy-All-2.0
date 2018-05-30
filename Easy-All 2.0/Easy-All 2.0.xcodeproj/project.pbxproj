@@ -14,6 +14,8 @@
 		50448CF020B6DD0700E4FFD0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50448CEF20B6DD0700E4FFD0 /* AppDelegate.m */; };
 		50448CF820B6DD0700E4FFD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50448CF720B6DD0700E4FFD0 /* Assets.xcassets */; };
 		50448CFE20B6DD0700E4FFD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50448CFD20B6DD0700E4FFD0 /* main.m */; };
+		505A993B20BE3D2A0084B7DA /* KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505A993A20BE3D2A0084B7DA /* KVOViewController.m */; };
+		505A993E20BE3E6A0084B7DA /* KVOBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 505A993D20BE3E6A0084B7DA /* KVOBean.m */; };
 		551BB02520BDBB520004E55B /* MainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 551BB02420BDBB520004E55B /* MainManager.m */; };
 		551BB04B20BDC9F30004E55B /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551BB04A20BDC9F30004E55B /* GCDViewController.m */; };
 		9057B2D420CA5C103DC0D081 /* libPods-Easy-All 2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F940BCCFA6EEE85C79177D88 /* libPods-Easy-All 2.0.a */; };
@@ -34,6 +36,10 @@
 		50448CF720B6DD0700E4FFD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50448CFC20B6DD0700E4FFD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50448CFD20B6DD0700E4FFD0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		505A993920BE3D2A0084B7DA /* KVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOViewController.h; sourceTree = "<group>"; };
+		505A993A20BE3D2A0084B7DA /* KVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOViewController.m; sourceTree = "<group>"; };
+		505A993C20BE3E6A0084B7DA /* KVOBean.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOBean.h; sourceTree = "<group>"; };
+		505A993D20BE3E6A0084B7DA /* KVOBean.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOBean.m; sourceTree = "<group>"; };
 		551BB02320BDBB520004E55B /* MainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainManager.h; sourceTree = "<group>"; };
 		551BB02420BDBB520004E55B /* MainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainManager.m; sourceTree = "<group>"; };
 		551BB04920BDC9F30004E55B /* GCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
@@ -101,6 +107,7 @@
 		50448CED20B6DD0700E4FFD0 /* Easy-All 2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				505A993820BE3CFE0084B7DA /* KVO */,
 				551BB04820BDC9E90004E55B /* GCD */,
 				501EED3420B6E033003FAD06 /* Main */,
 				50448CEE20B6DD0700E4FFD0 /* AppDelegate.h */,
@@ -111,6 +118,17 @@
 				50448CFD20B6DD0700E4FFD0 /* main.m */,
 			);
 			path = "Easy-All 2.0";
+			sourceTree = "<group>";
+		};
+		505A993820BE3CFE0084B7DA /* KVO */ = {
+			isa = PBXGroup;
+			children = (
+				505A993920BE3D2A0084B7DA /* KVOViewController.h */,
+				505A993A20BE3D2A0084B7DA /* KVOViewController.m */,
+				505A993C20BE3E6A0084B7DA /* KVOBean.h */,
+				505A993D20BE3E6A0084B7DA /* KVOBean.m */,
+			);
+			path = KVO;
 			sourceTree = "<group>";
 		};
 		551BB04820BDC9E90004E55B /* GCD */ = {
@@ -224,9 +242,11 @@
 			files = (
 				50448CFE20B6DD0700E4FFD0 /* main.m in Sources */,
 				501EED3720B6E04D003FAD06 /* MainViewController.m in Sources */,
+				505A993E20BE3E6A0084B7DA /* KVOBean.m in Sources */,
 				551BB02520BDBB520004E55B /* MainManager.m in Sources */,
 				502861A020BC350E006EABBA /* MainTypeBean.m in Sources */,
 				551BB04B20BDC9F30004E55B /* GCDViewController.m in Sources */,
+				505A993B20BE3D2A0084B7DA /* KVOViewController.m in Sources */,
 				5028619E20BC350E006EABBA /* MainToolBean.m in Sources */,
 				50448CF020B6DD0700E4FFD0 /* AppDelegate.m in Sources */,
 			);
