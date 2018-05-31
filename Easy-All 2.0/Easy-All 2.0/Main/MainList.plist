@@ -25,6 +25,12 @@
 				<key>viewController</key>
 				<string>CopyViewController</string>
 			</dict>
+			<dict>
+				<key>name</key>
+				<string>SDWebImage</string>
+				<key>viewController</key>
+				<string>SDImageViewController</string>
+			</dict>
 		</array>
 	</dict>
 	<dict>
