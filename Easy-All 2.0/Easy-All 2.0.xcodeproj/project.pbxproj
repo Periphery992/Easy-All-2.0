@@ -16,6 +16,8 @@
 		50448CFE20B6DD0700E4FFD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50448CFD20B6DD0700E4FFD0 /* main.m */; };
 		505A993B20BE3D2A0084B7DA /* KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505A993A20BE3D2A0084B7DA /* KVOViewController.m */; };
 		505A993E20BE3E6A0084B7DA /* KVOBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 505A993D20BE3E6A0084B7DA /* KVOBean.m */; };
+		505A994220BE76630084B7DA /* CopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505A994120BE76630084B7DA /* CopyViewController.m */; };
+		505A994520BE7B190084B7DA /* CopyBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 505A994420BE7B190084B7DA /* CopyBean.m */; };
 		551BB02520BDBB520004E55B /* MainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 551BB02420BDBB520004E55B /* MainManager.m */; };
 		551BB04B20BDC9F30004E55B /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551BB04A20BDC9F30004E55B /* GCDViewController.m */; };
 		9057B2D420CA5C103DC0D081 /* libPods-Easy-All 2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F940BCCFA6EEE85C79177D88 /* libPods-Easy-All 2.0.a */; };
@@ -40,6 +42,10 @@
 		505A993A20BE3D2A0084B7DA /* KVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOViewController.m; sourceTree = "<group>"; };
 		505A993C20BE3E6A0084B7DA /* KVOBean.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOBean.h; sourceTree = "<group>"; };
 		505A993D20BE3E6A0084B7DA /* KVOBean.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOBean.m; sourceTree = "<group>"; };
+		505A994020BE76630084B7DA /* CopyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CopyViewController.h; sourceTree = "<group>"; };
+		505A994120BE76630084B7DA /* CopyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CopyViewController.m; sourceTree = "<group>"; };
+		505A994320BE7B190084B7DA /* CopyBean.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CopyBean.h; sourceTree = "<group>"; };
+		505A994420BE7B190084B7DA /* CopyBean.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CopyBean.m; sourceTree = "<group>"; };
 		551BB02320BDBB520004E55B /* MainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainManager.h; sourceTree = "<group>"; };
 		551BB02420BDBB520004E55B /* MainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainManager.m; sourceTree = "<group>"; };
 		551BB04920BDC9F30004E55B /* GCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
@@ -107,6 +113,7 @@
 		50448CED20B6DD0700E4FFD0 /* Easy-All 2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				505A993F20BE76500084B7DA /* Copy */,
 				505A993820BE3CFE0084B7DA /* KVO */,
 				551BB04820BDC9E90004E55B /* GCD */,
 				501EED3420B6E033003FAD06 /* Main */,
@@ -129,6 +136,17 @@
 				505A993D20BE3E6A0084B7DA /* KVOBean.m */,
 			);
 			path = KVO;
+			sourceTree = "<group>";
+		};
+		505A993F20BE76500084B7DA /* Copy */ = {
+			isa = PBXGroup;
+			children = (
+				505A994020BE76630084B7DA /* CopyViewController.h */,
+				505A994120BE76630084B7DA /* CopyViewController.m */,
+				505A994320BE7B190084B7DA /* CopyBean.h */,
+				505A994420BE7B190084B7DA /* CopyBean.m */,
+			);
+			path = Copy;
 			sourceTree = "<group>";
 		};
 		551BB04820BDC9E90004E55B /* GCD */ = {
@@ -245,10 +263,12 @@
 				505A993E20BE3E6A0084B7DA /* KVOBean.m in Sources */,
 				551BB02520BDBB520004E55B /* MainManager.m in Sources */,
 				502861A020BC350E006EABBA /* MainTypeBean.m in Sources */,
+				505A994220BE76630084B7DA /* CopyViewController.m in Sources */,
 				551BB04B20BDC9F30004E55B /* GCDViewController.m in Sources */,
 				505A993B20BE3D2A0084B7DA /* KVOViewController.m in Sources */,
 				5028619E20BC350E006EABBA /* MainToolBean.m in Sources */,
 				50448CF020B6DD0700E4FFD0 /* AppDelegate.m in Sources */,
+				505A994520BE7B190084B7DA /* CopyBean.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

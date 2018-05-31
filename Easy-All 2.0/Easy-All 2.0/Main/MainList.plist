@@ -19,6 +19,12 @@
 				<key>viewController</key>
 				<string>KVOViewController</string>
 			</dict>
+			<dict>
+				<key>name</key>
+				<string>Copy</string>
+				<key>viewController</key>
+				<string>CopyViewController</string>
+			</dict>
 		</array>
 	</dict>
 	<dict>
