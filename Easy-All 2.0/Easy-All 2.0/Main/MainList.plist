@@ -40,9 +40,9 @@
 		<array>
 			<dict>
 				<key>name</key>
-				<string>tools1</string>
+				<string>Account</string>
 				<key>viewController</key>
-				<string>GCDViewController</string>
+				<string>AccountHomeViewController</string>
 			</dict>
 		</array>
 	</dict>

@@ -21,6 +21,7 @@
 		505B2DFF20BFE8D8008167AB /* SDImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505B2DFE20BFE8D8008167AB /* SDImageViewController.m */; };
 		551BB02520BDBB520004E55B /* MainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 551BB02420BDBB520004E55B /* MainManager.m */; };
 		551BB04B20BDC9F30004E55B /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551BB04A20BDC9F30004E55B /* GCDViewController.m */; };
+		554E8BD320C0311C00773BAE /* AccountHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554E8BD220C0311C00773BAE /* AccountHomeViewController.m */; };
 		9057B2D420CA5C103DC0D081 /* libPods-Easy-All 2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F940BCCFA6EEE85C79177D88 /* libPods-Easy-All 2.0.a */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,8 @@
 		551BB02420BDBB520004E55B /* MainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainManager.m; sourceTree = "<group>"; };
 		551BB04920BDC9F30004E55B /* GCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
 		551BB04A20BDC9F30004E55B /* GCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
+		554E8BD120C0311C00773BAE /* AccountHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountHomeViewController.h; sourceTree = "<group>"; };
+		554E8BD220C0311C00773BAE /* AccountHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountHomeViewController.m; sourceTree = "<group>"; };
 		714641612C3BD83443100705 /* Pods-Easy-All 2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy-All 2.0.release.xcconfig"; path = "Pods/Target Support Files/Pods-Easy-All 2.0/Pods-Easy-All 2.0.release.xcconfig"; sourceTree = "<group>"; };
 		A7F6158C0B0C30697B3DD5AE /* Pods-Easy-All 2.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy-All 2.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Easy-All 2.0/Pods-Easy-All 2.0.debug.xcconfig"; sourceTree = "<group>"; };
 		F940BCCFA6EEE85C79177D88 /* libPods-Easy-All 2.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Easy-All 2.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +119,7 @@
 		50448CED20B6DD0700E4FFD0 /* Easy-All 2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				554E8BCC20C02F9900773BAE /* Account */,
 				505B2DFC20BFE8C9008167AB /* SDImage */,
 				505A993F20BE76500084B7DA /* Copy */,
 				505A993820BE3CFE0084B7DA /* KVO */,
@@ -169,6 +173,23 @@
 				551BB04A20BDC9F30004E55B /* GCDViewController.m */,
 			);
 			path = GCD;
+			sourceTree = "<group>";
+		};
+		554E8BCC20C02F9900773BAE /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				554E8BD020C0311100773BAE /* Home */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		554E8BD020C0311100773BAE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				554E8BD120C0311C00773BAE /* AccountHomeViewController.h */,
+				554E8BD220C0311C00773BAE /* AccountHomeViewController.m */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		83266495931E1BBAE607A81D /* Frameworks */ = {
@@ -274,6 +295,7 @@
 				50448CFE20B6DD0700E4FFD0 /* main.m in Sources */,
 				501EED3720B6E04D003FAD06 /* MainViewController.m in Sources */,
 				505A993E20BE3E6A0084B7DA /* KVOBean.m in Sources */,
+				554E8BD320C0311C00773BAE /* AccountHomeViewController.m in Sources */,
 				551BB02520BDBB520004E55B /* MainManager.m in Sources */,
 				502861A020BC350E006EABBA /* MainTypeBean.m in Sources */,
 				505A994220BE76630084B7DA /* CopyViewController.m in Sources */,
