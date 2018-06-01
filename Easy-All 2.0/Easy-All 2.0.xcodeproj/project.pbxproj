@@ -19,6 +19,7 @@
 		505A994220BE76630084B7DA /* CopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505A994120BE76630084B7DA /* CopyViewController.m */; };
 		505A994520BE7B190084B7DA /* CopyBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 505A994420BE7B190084B7DA /* CopyBean.m */; };
 		505B2DFF20BFE8D8008167AB /* SDImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505B2DFE20BFE8D8008167AB /* SDImageViewController.m */; };
+		505B2E0720C131BB008167AB /* TallyHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505B2E0620C131BB008167AB /* TallyHomeViewController.m */; };
 		551BB02520BDBB520004E55B /* MainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 551BB02420BDBB520004E55B /* MainManager.m */; };
 		551BB04B20BDC9F30004E55B /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551BB04A20BDC9F30004E55B /* GCDViewController.m */; };
 		9057B2D420CA5C103DC0D081 /* libPods-Easy-All 2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F940BCCFA6EEE85C79177D88 /* libPods-Easy-All 2.0.a */; };
@@ -49,6 +50,8 @@
 		505A994420BE7B190084B7DA /* CopyBean.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CopyBean.m; sourceTree = "<group>"; };
 		505B2DFD20BFE8D8008167AB /* SDImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDImageViewController.h; sourceTree = "<group>"; };
 		505B2DFE20BFE8D8008167AB /* SDImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDImageViewController.m; sourceTree = "<group>"; };
+		505B2E0520C131BB008167AB /* TallyHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TallyHomeViewController.h; sourceTree = "<group>"; };
+		505B2E0620C131BB008167AB /* TallyHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TallyHomeViewController.m; sourceTree = "<group>"; };
 		551BB02320BDBB520004E55B /* MainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainManager.h; sourceTree = "<group>"; };
 		551BB02420BDBB520004E55B /* MainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainManager.m; sourceTree = "<group>"; };
 		551BB04920BDC9F30004E55B /* GCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
@@ -116,6 +119,7 @@
 		50448CED20B6DD0700E4FFD0 /* Easy-All 2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				505B2E0020C12F2C008167AB /* Tally */,
 				505B2DFC20BFE8C9008167AB /* SDImage */,
 				505A993F20BE76500084B7DA /* Copy */,
 				505A993820BE3CFE0084B7DA /* KVO */,
@@ -160,6 +164,23 @@
 				505B2DFE20BFE8D8008167AB /* SDImageViewController.m */,
 			);
 			path = SDImage;
+			sourceTree = "<group>";
+		};
+		505B2E0020C12F2C008167AB /* Tally */ = {
+			isa = PBXGroup;
+			children = (
+				505B2E0420C131B1008167AB /* Home */,
+			);
+			path = Tally;
+			sourceTree = "<group>";
+		};
+		505B2E0420C131B1008167AB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				505B2E0520C131BB008167AB /* TallyHomeViewController.h */,
+				505B2E0620C131BB008167AB /* TallyHomeViewController.m */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		551BB04820BDC9E90004E55B /* GCD */ = {
@@ -275,6 +296,7 @@
 				501EED3720B6E04D003FAD06 /* MainViewController.m in Sources */,
 				505A993E20BE3E6A0084B7DA /* KVOBean.m in Sources */,
 				551BB02520BDBB520004E55B /* MainManager.m in Sources */,
+				505B2E0720C131BB008167AB /* TallyHomeViewController.m in Sources */,
 				502861A020BC350E006EABBA /* MainTypeBean.m in Sources */,
 				505A994220BE76630084B7DA /* CopyViewController.m in Sources */,
 				551BB04B20BDC9F30004E55B /* GCDViewController.m in Sources */,

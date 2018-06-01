@@ -44,6 +44,12 @@
 				<key>viewController</key>
 				<string>GCDViewController</string>
 			</dict>
+			<dict>
+				<key>name</key>
+				<string>Tally</string>
+				<key>viewController</key>
+				<string>TallyHomeViewController</string>
+			</dict>
 		</array>
 	</dict>
 </array>
