@@ -69,23 +69,24 @@
     
     UIViewController *vc = [[NSClassFromString(bean.viewController) alloc]init];
     
-    if([bean.name isEqualToString:@"Tally"])
+    if([bean.name isEqualToString:@"Tally"]||[bean.name isEqualToString:@"Account"])
     {
         UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
         nav.tabBarItem.title = bean.name;
         nav.tabBarItem.image = [[UIImage imageNamed:@"tally_tabbar_home"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         nav.tabBarItem.selectedImage = [[UIImage imageNamed:@"tally_tabbar_home_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        
+
         NSMutableArray *viewsControllers  = [NSMutableArray array];
         [viewsControllers addObject:nav];
-        
+
         UITabBarController *tab = [[UITabBarController alloc]init];
         [tab setViewControllers:viewsControllers];
-        
+    
         [UIApplication sharedApplication].keyWindow.rootViewController = tab;
+        return;
     }
 
-    [self.navigationController pushViewController:vc animated:YES];
+//    [self.navigationController pushViewController:vc animated:YES];
     
 }
 

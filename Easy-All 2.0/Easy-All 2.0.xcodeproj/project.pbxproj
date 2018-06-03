@@ -22,6 +22,15 @@
 		505B2E0720C131BB008167AB /* TallyHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505B2E0620C131BB008167AB /* TallyHomeViewController.m */; };
 		551BB02520BDBB520004E55B /* MainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 551BB02420BDBB520004E55B /* MainManager.m */; };
 		551BB04B20BDC9F30004E55B /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551BB04A20BDC9F30004E55B /* GCDViewController.m */; };
+		552A42C420C2ECB4003C1645 /* AccountEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 552A42C320C2ECB4003C1645 /* AccountEditViewController.m */; };
+		552A42D320C30251003C1645 /* AccountInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 552A42D020C30251003C1645 /* AccountInfo.m */; };
+		552A42D420C30251003C1645 /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 552A42D220C30251003C1645 /* AccountManager.m */; };
+		552A42DB20C30523003C1645 /* AccountManager+Edit.m in Sources */ = {isa = PBXBuildFile; fileRef = 552A42DA20C30523003C1645 /* AccountManager+Edit.m */; };
+		552A42DE20C30A36003C1645 /* AccountCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 552A42DD20C30A36003C1645 /* AccountCellInfo.m */; };
+		552A42E120C30EF1003C1645 /* AccountNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 552A42E020C30EF1003C1645 /* AccountNameCell.m */; };
+		552A42E920C3B126003C1645 /* AccountEditViewController+CellDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 552A42E820C3B126003C1645 /* AccountEditViewController+CellDelegate.m */; };
+		552A42EC20C3BEA4003C1645 /* AccountNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 552A42EB20C3BEA4003C1645 /* AccountNormalCell.m */; };
+		552A42EF20C41DDD003C1645 /* AccountTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 552A42EE20C41DDD003C1645 /* AccountTypeViewController.m */; };
 		554E8BD320C0311C00773BAE /* AccountHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554E8BD220C0311C00773BAE /* AccountHomeViewController.m */; };
 		9057B2D420CA5C103DC0D081 /* libPods-Easy-All 2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F940BCCFA6EEE85C79177D88 /* libPods-Easy-All 2.0.a */; };
 /* End PBXBuildFile section */
@@ -57,6 +66,25 @@
 		551BB02420BDBB520004E55B /* MainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainManager.m; sourceTree = "<group>"; };
 		551BB04920BDC9F30004E55B /* GCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
 		551BB04A20BDC9F30004E55B /* GCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
+		552A42C220C2ECB4003C1645 /* AccountEditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountEditViewController.h; sourceTree = "<group>"; };
+		552A42C320C2ECB4003C1645 /* AccountEditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountEditViewController.m; sourceTree = "<group>"; };
+		552A42CF20C30251003C1645 /* AccountInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountInfo.h; sourceTree = "<group>"; };
+		552A42D020C30251003C1645 /* AccountInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountInfo.m; sourceTree = "<group>"; };
+		552A42D120C30251003C1645 /* AccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManager.h; sourceTree = "<group>"; };
+		552A42D220C30251003C1645 /* AccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManager.m; sourceTree = "<group>"; };
+		552A42D920C30523003C1645 /* AccountManager+Edit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AccountManager+Edit.h"; sourceTree = "<group>"; };
+		552A42DA20C30523003C1645 /* AccountManager+Edit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AccountManager+Edit.m"; sourceTree = "<group>"; };
+		552A42DC20C30A36003C1645 /* AccountCellInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountCellInfo.h; sourceTree = "<group>"; };
+		552A42DD20C30A36003C1645 /* AccountCellInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountCellInfo.m; sourceTree = "<group>"; };
+		552A42DF20C30EF1003C1645 /* AccountNameCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountNameCell.h; sourceTree = "<group>"; };
+		552A42E020C30EF1003C1645 /* AccountNameCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountNameCell.m; sourceTree = "<group>"; };
+		552A42E320C397F7003C1645 /* UIColorDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIColorDefine.h; sourceTree = "<group>"; };
+		552A42E720C3B126003C1645 /* AccountEditViewController+CellDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AccountEditViewController+CellDelegate.h"; sourceTree = "<group>"; };
+		552A42E820C3B126003C1645 /* AccountEditViewController+CellDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AccountEditViewController+CellDelegate.m"; sourceTree = "<group>"; };
+		552A42EA20C3BEA4003C1645 /* AccountNormalCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountNormalCell.h; sourceTree = "<group>"; };
+		552A42EB20C3BEA4003C1645 /* AccountNormalCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountNormalCell.m; sourceTree = "<group>"; };
+		552A42ED20C41DDD003C1645 /* AccountTypeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountTypeViewController.h; sourceTree = "<group>"; };
+		552A42EE20C41DDD003C1645 /* AccountTypeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountTypeViewController.m; sourceTree = "<group>"; };
 		554E8BD120C0311C00773BAE /* AccountHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountHomeViewController.h; sourceTree = "<group>"; };
 		554E8BD220C0311C00773BAE /* AccountHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountHomeViewController.m; sourceTree = "<group>"; };
 		714641612C3BD83443100705 /* Pods-Easy-All 2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy-All 2.0.release.xcconfig"; path = "Pods/Target Support Files/Pods-Easy-All 2.0/Pods-Easy-All 2.0.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +150,7 @@
 		50448CED20B6DD0700E4FFD0 /* Easy-All 2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				552A42E220C397CE003C1645 /* Defend */,
 				554E8BCC20C02F9900773BAE /* Account */,
 				505B2E0020C12F2C008167AB /* Tally */,
 				505B2DFC20BFE8C9008167AB /* SDImage */,
@@ -196,9 +225,51 @@
 			path = GCD;
 			sourceTree = "<group>";
 		};
+		552A42C120C2EC99003C1645 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				552A42C220C2ECB4003C1645 /* AccountEditViewController.h */,
+				552A42C320C2ECB4003C1645 /* AccountEditViewController.m */,
+				552A42E720C3B126003C1645 /* AccountEditViewController+CellDelegate.h */,
+				552A42E820C3B126003C1645 /* AccountEditViewController+CellDelegate.m */,
+				552A42DF20C30EF1003C1645 /* AccountNameCell.h */,
+				552A42E020C30EF1003C1645 /* AccountNameCell.m */,
+				552A42EA20C3BEA4003C1645 /* AccountNormalCell.h */,
+				552A42EB20C3BEA4003C1645 /* AccountNormalCell.m */,
+				552A42ED20C41DDD003C1645 /* AccountTypeViewController.h */,
+				552A42EE20C41DDD003C1645 /* AccountTypeViewController.m */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		552A42CE20C30237003C1645 /* AccountManager */ = {
+			isa = PBXGroup;
+			children = (
+				552A42CF20C30251003C1645 /* AccountInfo.h */,
+				552A42D020C30251003C1645 /* AccountInfo.m */,
+				552A42D120C30251003C1645 /* AccountManager.h */,
+				552A42D220C30251003C1645 /* AccountManager.m */,
+				552A42D920C30523003C1645 /* AccountManager+Edit.h */,
+				552A42DA20C30523003C1645 /* AccountManager+Edit.m */,
+				552A42DC20C30A36003C1645 /* AccountCellInfo.h */,
+				552A42DD20C30A36003C1645 /* AccountCellInfo.m */,
+			);
+			path = AccountManager;
+			sourceTree = "<group>";
+		};
+		552A42E220C397CE003C1645 /* Defend */ = {
+			isa = PBXGroup;
+			children = (
+				552A42E320C397F7003C1645 /* UIColorDefine.h */,
+			);
+			path = Defend;
+			sourceTree = "<group>";
+		};
 		554E8BCC20C02F9900773BAE /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				552A42CE20C30237003C1645 /* AccountManager */,
+				552A42C120C2EC99003C1645 /* Edit */,
 				554E8BD020C0311100773BAE /* Home */,
 			);
 			path = Account;
@@ -232,6 +303,8 @@
 				50448CE720B6DD0700E4FFD0 /* Sources */,
 				50448CE820B6DD0700E4FFD0 /* Frameworks */,
 				50448CE920B6DD0700E4FFD0 /* Resources */,
+				E5FA5C11BAE075ED3E48B13A /* [CP] Embed Pods Frameworks */,
+				941C2EC71CAC07AC13CC7302 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -288,6 +361,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		941C2EC71CAC07AC13CC7302 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Easy-All 2.0/Pods-Easy-All 2.0-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		AA925041A7B9D81FFFA75FF7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -306,6 +394,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E5FA5C11BAE075ED3E48B13A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Easy-All 2.0/Pods-Easy-All 2.0-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -313,17 +416,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				552A42E920C3B126003C1645 /* AccountEditViewController+CellDelegate.m in Sources */,
 				50448CFE20B6DD0700E4FFD0 /* main.m in Sources */,
+				552A42C420C2ECB4003C1645 /* AccountEditViewController.m in Sources */,
 				501EED3720B6E04D003FAD06 /* MainViewController.m in Sources */,
 				505A993E20BE3E6A0084B7DA /* KVOBean.m in Sources */,
 				554E8BD320C0311C00773BAE /* AccountHomeViewController.m in Sources */,
+				552A42DE20C30A36003C1645 /* AccountCellInfo.m in Sources */,
 				551BB02520BDBB520004E55B /* MainManager.m in Sources */,
 				505B2E0720C131BB008167AB /* TallyHomeViewController.m in Sources */,
 				502861A020BC350E006EABBA /* MainTypeBean.m in Sources */,
+				552A42EC20C3BEA4003C1645 /* AccountNormalCell.m in Sources */,
+				552A42D420C30251003C1645 /* AccountManager.m in Sources */,
+				552A42E120C30EF1003C1645 /* AccountNameCell.m in Sources */,
 				505A994220BE76630084B7DA /* CopyViewController.m in Sources */,
 				551BB04B20BDC9F30004E55B /* GCDViewController.m in Sources */,
+				552A42DB20C30523003C1645 /* AccountManager+Edit.m in Sources */,
 				505A993B20BE3D2A0084B7DA /* KVOViewController.m in Sources */,
+				552A42D320C30251003C1645 /* AccountInfo.m in Sources */,
 				5028619E20BC350E006EABBA /* MainToolBean.m in Sources */,
+				552A42EF20C41DDD003C1645 /* AccountTypeViewController.m in Sources */,
 				50448CF020B6DD0700E4FFD0 /* AppDelegate.m in Sources */,
 				505A994520BE7B190084B7DA /* CopyBean.m in Sources */,
 				505B2DFF20BFE8D8008167AB /* SDImageViewController.m in Sources */,
@@ -455,6 +567,7 @@
 				PROVISIONING_PROFILE = "d787454e-3dfb-4d56-a161-40e9b6dfbb20";
 				PROVISIONING_PROFILE_SPECIFIER = Ernitec_Development;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Debug;
 		};
@@ -476,6 +589,7 @@
 				PROVISIONING_PROFILE = "f0cdeeb4-bdc9-451a-bc0d-ac00a26bbe81";
 				PROVISIONING_PROFILE_SPECIFIER = Ernitec_ADHoc;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Release;
 		};

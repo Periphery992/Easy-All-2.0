@@ -7,6 +7,11 @@
 //
 
 #import "AccountHomeViewController.h"
+#import "AccountTypeViewController.h"
+
+@interface AccountHomeViewController()
+@property (nonatomic, strong)  UIBarButtonItem *rightBarButtonItem;
+@end
 
 @implementation AccountHomeViewController
 
@@ -14,6 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.navigationItem.rightBarButtonItem = self.rightBarButtonItem;
     
 }
 
@@ -22,8 +30,29 @@
 #pragma mark - Public Methods
 
 #pragma mark - Private Methods
+- (void)touchRightBarButtonItem
+{
+    AccountTypeViewController *vc = [[AccountTypeViewController alloc]init];
+    [vc setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 #pragma mark - Layout Methods
 
 #pragma mark - GET/SET Methods
+- (UIBarButtonItem *)rightBarButtonItem
+{
+    if (!_rightBarButtonItem)
+    {
+        _rightBarButtonItem = ({
+            
+            UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(touchRightBarButtonItem)];
+            
+            rightBarButtonItem;
+        });
+    }
+    
+    return _rightBarButtonItem;
+}
+
 @end
