@@ -25,6 +25,12 @@
 		505EF69320C62F4B000700AE /* AccountTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF68320C62F4B000700AE /* AccountTypeViewController.m */; };
 		505EF69420C62F4B000700AE /* AccountHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF68620C62F4B000700AE /* AccountHomeViewController.m */; };
 		505EF69520C62F4B000700AE /* TallyHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF68A20C62F4B000700AE /* TallyHomeViewController.m */; };
+		505EF6A620C62F6C000700AE /* SDImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF69820C62F6C000700AE /* SDImageViewController.m */; };
+		505EF6A720C62F6C000700AE /* CopyBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF69B20C62F6C000700AE /* CopyBean.m */; };
+		505EF6A820C62F6C000700AE /* CopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF69D20C62F6C000700AE /* CopyViewController.m */; };
+		505EF6A920C62F6C000700AE /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF6A020C62F6C000700AE /* GCDViewController.m */; };
+		505EF6AA20C62F6C000700AE /* KVOBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF6A320C62F6C000700AE /* KVOBean.m */; };
+		505EF6AB20C62F6C000700AE /* KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF6A520C62F6C000700AE /* KVOViewController.m */; };
 		551BB02520BDBB520004E55B /* MainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 551BB02420BDBB520004E55B /* MainManager.m */; };
 		9057B2D420CA5C103DC0D081 /* libPods-Easy-All 2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F940BCCFA6EEE85C79177D88 /* libPods-Easy-All 2.0.a */; };
 /* End PBXBuildFile section */
@@ -66,6 +72,18 @@
 		505EF68620C62F4B000700AE /* AccountHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountHomeViewController.m; sourceTree = "<group>"; };
 		505EF68920C62F4B000700AE /* TallyHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TallyHomeViewController.h; sourceTree = "<group>"; };
 		505EF68A20C62F4B000700AE /* TallyHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TallyHomeViewController.m; sourceTree = "<group>"; };
+		505EF69720C62F6C000700AE /* SDImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageViewController.h; sourceTree = "<group>"; };
+		505EF69820C62F6C000700AE /* SDImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDImageViewController.m; sourceTree = "<group>"; };
+		505EF69A20C62F6C000700AE /* CopyBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopyBean.h; sourceTree = "<group>"; };
+		505EF69B20C62F6C000700AE /* CopyBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopyBean.m; sourceTree = "<group>"; };
+		505EF69C20C62F6C000700AE /* CopyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopyViewController.h; sourceTree = "<group>"; };
+		505EF69D20C62F6C000700AE /* CopyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopyViewController.m; sourceTree = "<group>"; };
+		505EF69F20C62F6C000700AE /* GCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
+		505EF6A020C62F6C000700AE /* GCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
+		505EF6A220C62F6C000700AE /* KVOBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOBean.h; sourceTree = "<group>"; };
+		505EF6A320C62F6C000700AE /* KVOBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOBean.m; sourceTree = "<group>"; };
+		505EF6A420C62F6C000700AE /* KVOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOViewController.h; sourceTree = "<group>"; };
+		505EF6A520C62F6C000700AE /* KVOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOViewController.m; sourceTree = "<group>"; };
 		551BB02320BDBB520004E55B /* MainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainManager.h; sourceTree = "<group>"; };
 		551BB02420BDBB520004E55B /* MainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainManager.m; sourceTree = "<group>"; };
 		552A42E320C397F7003C1645 /* UIColorDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIColorDefine.h; sourceTree = "<group>"; };
@@ -149,6 +167,10 @@
 		505EF66D20C62EFA000700AE /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				505EF69920C62F6C000700AE /* Copy */,
+				505EF69E20C62F6C000700AE /* GCD */,
+				505EF6A120C62F6C000700AE /* KVO */,
+				505EF69620C62F6C000700AE /* SDImage */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -228,6 +250,46 @@
 				505EF68A20C62F4B000700AE /* TallyHomeViewController.m */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		505EF69620C62F6C000700AE /* SDImage */ = {
+			isa = PBXGroup;
+			children = (
+				505EF69720C62F6C000700AE /* SDImageViewController.h */,
+				505EF69820C62F6C000700AE /* SDImageViewController.m */,
+			);
+			path = SDImage;
+			sourceTree = "<group>";
+		};
+		505EF69920C62F6C000700AE /* Copy */ = {
+			isa = PBXGroup;
+			children = (
+				505EF69A20C62F6C000700AE /* CopyBean.h */,
+				505EF69B20C62F6C000700AE /* CopyBean.m */,
+				505EF69C20C62F6C000700AE /* CopyViewController.h */,
+				505EF69D20C62F6C000700AE /* CopyViewController.m */,
+			);
+			path = Copy;
+			sourceTree = "<group>";
+		};
+		505EF69E20C62F6C000700AE /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				505EF69F20C62F6C000700AE /* GCDViewController.h */,
+				505EF6A020C62F6C000700AE /* GCDViewController.m */,
+			);
+			path = GCD;
+			sourceTree = "<group>";
+		};
+		505EF6A120C62F6C000700AE /* KVO */ = {
+			isa = PBXGroup;
+			children = (
+				505EF6A220C62F6C000700AE /* KVOBean.h */,
+				505EF6A320C62F6C000700AE /* KVOBean.m */,
+				505EF6A420C62F6C000700AE /* KVOViewController.h */,
+				505EF6A520C62F6C000700AE /* KVOViewController.m */,
+			);
+			path = KVO;
 			sourceTree = "<group>";
 		};
 		552A42E220C397CE003C1645 /* Defend */ = {
@@ -370,11 +432,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				505EF6AA20C62F6C000700AE /* KVOBean.m in Sources */,
 				505EF68B20C62F4B000700AE /* AccountCellInfo.m in Sources */,
 				505EF68E20C62F4B000700AE /* AccountManager.m in Sources */,
+				505EF6AB20C62F6C000700AE /* KVOViewController.m in Sources */,
 				505EF68C20C62F4B000700AE /* AccountInfo.m in Sources */,
 				505EF68F20C62F4B000700AE /* AccountEditNameCell.m in Sources */,
+				505EF6A920C62F6C000700AE /* GCDViewController.m in Sources */,
 				505EF69520C62F4B000700AE /* TallyHomeViewController.m in Sources */,
+				505EF6A820C62F6C000700AE /* CopyViewController.m in Sources */,
+				505EF6A620C62F6C000700AE /* SDImageViewController.m in Sources */,
 				505EF68D20C62F4B000700AE /* AccountManager+Edit.m in Sources */,
 				50448CFE20B6DD0700E4FFD0 /* main.m in Sources */,
 				505EF69220C62F4B000700AE /* AccountEditViewController.m in Sources */,
@@ -386,6 +453,7 @@
 				505EF69020C62F4B000700AE /* AccountEditNormalCell.m in Sources */,
 				505EF69320C62F4B000700AE /* AccountTypeViewController.m in Sources */,
 				505EF69120C62F4B000700AE /* AccountEditViewController+CellDelegate.m in Sources */,
+				505EF6A720C62F6C000700AE /* CopyBean.m in Sources */,
 				50448CF020B6DD0700E4FFD0 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
