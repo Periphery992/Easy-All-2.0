@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AccountNormalCell : UITableViewCell
+@interface AccountEditNormalCell : UITableViewCell
 
 @end

@@ -8,7 +8,7 @@
 
 #import "AccountEditViewController.h"
 #import "AccountManager+Edit.h"
-#import "AccountNameCell.h"
+#import "AccountEditNameCell.h"
 
 
 @interface AccountEditViewController()<UITableViewDelegate,UITableViewDataSource,AccountNameCellDelegate>
@@ -54,11 +54,11 @@
     if (cellInfo.type == AccountCellTypeName)
     {
         static NSString *accountNameCell = @"accountNameCell";
-        AccountNameCell *cell = [tableView dequeueReusableCellWithIdentifier:accountNameCell];
+        AccountEditNameCell *cell = [tableView dequeueReusableCellWithIdentifier:accountNameCell];
         
         if (cell == nil)
         {
-            cell = [[AccountNameCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:accountNameCell];
+            cell = [[AccountEditNameCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:accountNameCell];
             cell.delegate = self;
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
         }

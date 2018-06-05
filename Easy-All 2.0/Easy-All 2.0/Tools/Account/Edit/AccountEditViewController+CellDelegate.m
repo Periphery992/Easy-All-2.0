@@ -7,7 +7,7 @@
 //
 
 #import "AccountEditViewController+CellDelegate.h"
-#import "AccountNameCell.h"
+#import "AccountEditNameCell.h"
 #import "AccountManager+Edit.h"
 
 @interface AccountEditViewController()
@@ -16,7 +16,7 @@
 @implementation AccountEditViewController (CellDelegate)
 
 #pragma mark - AccountNameCellDelegate
-- (void)accountNameCell:(AccountNameCell *)accountNameCell didEndEditingWithText:(NSString *)text
+- (void)accountNameCell:(AccountEditNameCell *)accountNameCell didEndEditingWithText:(NSString *)text
 {
     [[AccountManager sharedInstance] setAccountName:text];
 }

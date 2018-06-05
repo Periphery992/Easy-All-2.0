@@ -8,16 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@class AccountNameCell;
+@class AccountEditNameCell;
 
 @protocol AccountNameCellDelegate<NSObject>
 
 @optional
-- (void)accountNameCell:(AccountNameCell *)accountNameCell didEndEditingWithText:(NSString *)text;
+- (void)accountNameCell:(AccountEditNameCell *)accountNameCell didEndEditingWithText:(NSString *)text;
 
 @end
 
-@interface AccountNameCell : UITableViewCell
+@interface AccountEditNameCell : UITableViewCell
 @property (nonatomic, weak) id<AccountNameCellDelegate> delegate;
 
 @end

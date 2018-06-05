@@ -6,16 +6,16 @@
 //  Copyright © 2018年 陈舒澳. All rights reserved.
 //
 
-#import "AccountNameCell.h"
+#import "AccountEditNameCell.h"
 #import "UIImage+HLFExtension.h"
 
-@interface AccountNameCell()<UITextFieldDelegate>
+@interface AccountEditNameCell()<UITextFieldDelegate>
 @property (nonatomic, strong) UIButton *btnLogo;
 @property (nonatomic, strong) UITextField *nameTxtField;
 
 @end;
 
-@implementation AccountNameCell
+@implementation AccountEditNameCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

@@ -6,9 +6,9 @@
 //  Copyright © 2018年 陈舒澳. All rights reserved.
 //
 
-#import "AccountNormalCell.h"
+#import "AccountEditNormalCell.h"
 
-@implementation AccountNormalCell
+@implementation AccountEditNormalCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
