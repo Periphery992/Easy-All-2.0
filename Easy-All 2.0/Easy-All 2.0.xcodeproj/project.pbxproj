@@ -31,6 +31,9 @@
 		505EF6A920C62F6C000700AE /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF6A020C62F6C000700AE /* GCDViewController.m */; };
 		505EF6AA20C62F6C000700AE /* KVOBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF6A320C62F6C000700AE /* KVOBean.m */; };
 		505EF6AB20C62F6C000700AE /* KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF6A520C62F6C000700AE /* KVOViewController.m */; };
+		505EF6AF20C62F9A000700AE /* KVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF6AE20C62F9A000700AE /* KVCViewController.m */; };
+		505EF6B220C63419000700AE /* KVCTestBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF6B120C63419000700AE /* KVCTestBean.m */; };
+		509CD30820C8CE1100D29595 /* iPadMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 509CD30720C8CE1100D29595 /* iPadMainViewController.m */; };
 		551BB02520BDBB520004E55B /* MainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 551BB02420BDBB520004E55B /* MainManager.m */; };
 		9057B2D420CA5C103DC0D081 /* libPods-Easy-All 2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F940BCCFA6EEE85C79177D88 /* libPods-Easy-All 2.0.a */; };
 /* End PBXBuildFile section */
@@ -84,6 +87,13 @@
 		505EF6A320C62F6C000700AE /* KVOBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOBean.m; sourceTree = "<group>"; };
 		505EF6A420C62F6C000700AE /* KVOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOViewController.h; sourceTree = "<group>"; };
 		505EF6A520C62F6C000700AE /* KVOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOViewController.m; sourceTree = "<group>"; };
+		505EF6AD20C62F9A000700AE /* KVCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCViewController.h; sourceTree = "<group>"; };
+		505EF6AE20C62F9A000700AE /* KVCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCViewController.m; sourceTree = "<group>"; };
+		505EF6B020C63419000700AE /* KVCTestBean.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCTestBean.h; sourceTree = "<group>"; };
+		505EF6B120C63419000700AE /* KVCTestBean.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCTestBean.m; sourceTree = "<group>"; };
+		509CD30420C8CD9F00D29595 /* UIDeviceDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIDeviceDefine.h; sourceTree = "<group>"; };
+		509CD30620C8CE1100D29595 /* iPadMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iPadMainViewController.h; sourceTree = "<group>"; };
+		509CD30720C8CE1100D29595 /* iPadMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPadMainViewController.m; sourceTree = "<group>"; };
 		551BB02320BDBB520004E55B /* MainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainManager.h; sourceTree = "<group>"; };
 		551BB02420BDBB520004E55B /* MainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainManager.m; sourceTree = "<group>"; };
 		552A42E320C397F7003C1645 /* UIColorDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIColorDefine.h; sourceTree = "<group>"; };
@@ -150,6 +160,7 @@
 		50448CED20B6DD0700E4FFD0 /* Easy-All 2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				509CD30520C8CDFB00D29595 /* iPadMain */,
 				505EF66E20C62F2F000700AE /* Tools */,
 				505EF66D20C62EFA000700AE /* Test */,
 				552A42E220C397CE003C1645 /* Defend */,
@@ -167,6 +178,7 @@
 		505EF66D20C62EFA000700AE /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				505EF6AC20C62F92000700AE /* KVC */,
 				505EF69920C62F6C000700AE /* Copy */,
 				505EF69E20C62F6C000700AE /* GCD */,
 				505EF6A120C62F6C000700AE /* KVO */,
@@ -292,10 +304,31 @@
 			path = KVO;
 			sourceTree = "<group>";
 		};
+		505EF6AC20C62F92000700AE /* KVC */ = {
+			isa = PBXGroup;
+			children = (
+				505EF6AD20C62F9A000700AE /* KVCViewController.h */,
+				505EF6AE20C62F9A000700AE /* KVCViewController.m */,
+				505EF6B020C63419000700AE /* KVCTestBean.h */,
+				505EF6B120C63419000700AE /* KVCTestBean.m */,
+			);
+			path = KVC;
+			sourceTree = "<group>";
+		};
+		509CD30520C8CDFB00D29595 /* iPadMain */ = {
+			isa = PBXGroup;
+			children = (
+				509CD30620C8CE1100D29595 /* iPadMainViewController.h */,
+				509CD30720C8CE1100D29595 /* iPadMainViewController.m */,
+			);
+			path = iPadMain;
+			sourceTree = "<group>";
+		};
 		552A42E220C397CE003C1645 /* Defend */ = {
 			isa = PBXGroup;
 			children = (
 				552A42E320C397F7003C1645 /* UIColorDefine.h */,
+				509CD30420C8CD9F00D29595 /* UIDeviceDefine.h */,
 			);
 			path = Defend;
 			sourceTree = "<group>";
@@ -435,12 +468,15 @@
 				505EF6AA20C62F6C000700AE /* KVOBean.m in Sources */,
 				505EF68B20C62F4B000700AE /* AccountCellInfo.m in Sources */,
 				505EF68E20C62F4B000700AE /* AccountManager.m in Sources */,
+				509CD30820C8CE1100D29595 /* iPadMainViewController.m in Sources */,
 				505EF6AB20C62F6C000700AE /* KVOViewController.m in Sources */,
 				505EF68C20C62F4B000700AE /* AccountInfo.m in Sources */,
 				505EF68F20C62F4B000700AE /* AccountEditNameCell.m in Sources */,
 				505EF6A920C62F6C000700AE /* GCDViewController.m in Sources */,
 				505EF69520C62F4B000700AE /* TallyHomeViewController.m in Sources */,
+				505EF6B220C63419000700AE /* KVCTestBean.m in Sources */,
 				505EF6A820C62F6C000700AE /* CopyViewController.m in Sources */,
+				505EF6AF20C62F9A000700AE /* KVCViewController.m in Sources */,
 				505EF6A620C62F6C000700AE /* SDImageViewController.m in Sources */,
 				505EF68D20C62F4B000700AE /* AccountManager+Edit.m in Sources */,
 				50448CFE20B6DD0700E4FFD0 /* main.m in Sources */,

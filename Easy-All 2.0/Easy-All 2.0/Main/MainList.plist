@@ -31,6 +31,12 @@
 				<key>viewController</key>
 				<string>SDImageViewController</string>
 			</dict>
+			<dict>
+				<key>name</key>
+				<string>KVC</string>
+				<key>viewController</key>
+				<string>KVCViewController</string>
+			</dict>
 		</array>
 	</dict>
 	<dict>

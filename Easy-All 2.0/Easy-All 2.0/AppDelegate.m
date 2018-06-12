@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "UIDeviceDefine.h"
+#import "iPadMainViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,15 +23,38 @@
     
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    MainViewController *controller = [[MainViewController alloc]init];
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:controller];
+//    if (IS_IPAD)
+//    {
+//        iPadMainViewController *controller = [[iPadMainViewController alloc]init];
+//        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:controller];
+//
+//        self.window.rootViewController = nav;
+//    }
+//    else if (IS_IPHONE)
+//    {
+        MainViewController *controller = [[MainViewController alloc]init];
+        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:controller];
+        
+        self.window.rootViewController = nav;
+//    }
 
-    self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
+    
     
     return YES;
 }
 
+-(UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window{
+    
+//    if (IS_IPAD)
+//    {
+//        return UIInterfaceOrientationMaskLandscapeRight;
+//    }
+//    else
+//    {
+        return UIInterfaceOrientationMaskAll;
+//    }
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
