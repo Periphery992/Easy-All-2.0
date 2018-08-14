@@ -18,7 +18,7 @@
 //    [self asyncConcurrent];
 //    [self asyncSerial];
 //    [self syncConcurrent];
-    [self syncConcurrent];
+//    [self syncConcurrent];
     
 }
 

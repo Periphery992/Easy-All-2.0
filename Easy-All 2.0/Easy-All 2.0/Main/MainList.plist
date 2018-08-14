@@ -37,6 +37,12 @@
 				<key>viewController</key>
 				<string>KVCViewController</string>
 			</dict>
+			<dict>
+				<key>name</key>
+				<string>NSThread</string>
+				<key>viewController</key>
+				<string>NSThreadViewController</string>
+			</dict>
 		</array>
 	</dict>
 	<dict>
