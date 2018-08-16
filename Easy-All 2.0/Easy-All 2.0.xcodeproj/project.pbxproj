@@ -15,6 +15,7 @@
 		50448CF820B6DD0700E4FFD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50448CF720B6DD0700E4FFD0 /* Assets.xcassets */; };
 		50448CFE20B6DD0700E4FFD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50448CFD20B6DD0700E4FFD0 /* main.m */; };
 		504B507B2122C00E00514388 /* NSThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 504B507A2122C00E00514388 /* NSThreadViewController.m */; };
+		504B50802123FB8200514388 /* HLFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 504B507F2123FB8200514388 /* HLFViewController.m */; };
 		505EF68B20C62F4B000700AE /* AccountCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF67220C62F4B000700AE /* AccountCellInfo.m */; };
 		505EF68C20C62F4B000700AE /* AccountInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF67420C62F4B000700AE /* AccountInfo.m */; };
 		505EF68D20C62F4B000700AE /* AccountManager+Edit.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF67620C62F4B000700AE /* AccountManager+Edit.m */; };
@@ -59,6 +60,8 @@
 		50448CFD20B6DD0700E4FFD0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		504B50792122C00E00514388 /* NSThreadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSThreadViewController.h; sourceTree = "<group>"; };
 		504B507A2122C00E00514388 /* NSThreadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSThreadViewController.m; sourceTree = "<group>"; };
+		504B507E2123FB8200514388 /* HLFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLFViewController.h; sourceTree = "<group>"; };
+		504B507F2123FB8200514388 /* HLFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLFViewController.m; sourceTree = "<group>"; };
 		505EF67120C62F4B000700AE /* AccountCellInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountCellInfo.h; sourceTree = "<group>"; };
 		505EF67220C62F4B000700AE /* AccountCellInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountCellInfo.m; sourceTree = "<group>"; };
 		505EF67320C62F4B000700AE /* AccountInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountInfo.h; sourceTree = "<group>"; };
@@ -175,6 +178,7 @@
 		50448CED20B6DD0700E4FFD0 /* Easy-All 2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				504B507C2123FB5800514388 /* Library */,
 				5018FBCC20DD45AC0083148E /* Define */,
 				509CD30520C8CDFB00D29595 /* iPadMain */,
 				505EF66E20C62F2F000700AE /* Tools */,
@@ -197,6 +201,23 @@
 				504B507A2122C00E00514388 /* NSThreadViewController.m */,
 			);
 			path = NSThread;
+			sourceTree = "<group>";
+		};
+		504B507C2123FB5800514388 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				504B507D2123FB7500514388 /* UIViewController */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		504B507D2123FB7500514388 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				504B507E2123FB8200514388 /* HLFViewController.h */,
+				504B507F2123FB8200514388 /* HLFViewController.m */,
+			);
+			path = UIViewController;
 			sourceTree = "<group>";
 		};
 		505EF66D20C62EFA000700AE /* Test */ = {
@@ -491,6 +512,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				504B50802123FB8200514388 /* HLFViewController.m in Sources */,
 				505EF6AA20C62F6C000700AE /* KVOBean.m in Sources */,
 				505EF68B20C62F4B000700AE /* AccountCellInfo.m in Sources */,
 				506A21B620EC62A20090C03C /* TimeViewController.m in Sources */,
