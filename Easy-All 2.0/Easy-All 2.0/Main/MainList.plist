@@ -37,6 +37,18 @@
 				<key>viewController</key>
 				<string>KVCViewController</string>
 			</dict>
+			<dict>
+				<key>name</key>
+				<string>Animation</string>
+				<key>viewController</key>
+				<string>AnimationViewController</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Runtime</string>
+				<key>viewController</key>
+				<string>RuntimeViewController</string>
+			</dict>
 		</array>
 	</dict>
 	<dict>
