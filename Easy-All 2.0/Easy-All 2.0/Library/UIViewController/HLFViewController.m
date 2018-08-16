@@ -26,14 +26,14 @@
 {
     [super viewWillDisappear:animated];
     
-     DDLogVerbose(@"%@ willDisappear",self);
+     DDLogVerbose(@"%@ willDisappear",[self class]);
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
     
-    DDLogVerbose(@"%@ didDisappear",self);
+    DDLogVerbose(@"%@ didDisappear",[self class]);
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -47,7 +47,7 @@
     else
     {
         self.isDidAppear = YES;
-        DDLogVerbose(@"%@ didAppear",self);
+        DDLogVerbose(@"%@ didAppear",[self class]);
     }
 }
 
@@ -61,20 +61,20 @@
     }
     else
     {
-         DDLogVerbose(@"%@ willAppear",self);
+         DDLogVerbose(@"%@ willAppear",[self class]);
     }
 }
 
 //页面再次出现
 - (void)viewDidAppearAgain
 {
-    DDLogVerbose(@"%@ didAppearAgain",self);
+    DDLogVerbose(@"%@ didAppearAgain",[self class]);
 }
 
 //页面将再次出现
 - (void)viewWillAppearAgain
 {
-    DDLogVerbose(@"%@ WillAppearAgain",self);
+    DDLogVerbose(@"%@ WillAppearAgain",[self class]);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -84,7 +84,7 @@
 
 - (void)dealloc
 {
-    DDLogVerbose(@"%@ dealloc",self);
+    DDLogVerbose(@"%@ dealloc",[self class]);
 }
 
 #pragma mark - Delegate Methods
