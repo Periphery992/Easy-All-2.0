@@ -17,6 +17,8 @@
 		50448CF020B6DD0700E4FFD0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50448CEF20B6DD0700E4FFD0 /* AppDelegate.m */; };
 		50448CF820B6DD0700E4FFD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50448CF720B6DD0700E4FFD0 /* Assets.xcassets */; };
 		50448CFE20B6DD0700E4FFD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50448CFD20B6DD0700E4FFD0 /* main.m */; };
+		504B507B2122C00E00514388 /* NSThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 504B507A2122C00E00514388 /* NSThreadViewController.m */; };
+		504B50802123FB8200514388 /* HLFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 504B507F2123FB8200514388 /* HLFViewController.m */; };
 		505EF68B20C62F4B000700AE /* AccountCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF67220C62F4B000700AE /* AccountCellInfo.m */; };
 		505EF68C20C62F4B000700AE /* AccountInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF67420C62F4B000700AE /* AccountInfo.m */; };
 		505EF68D20C62F4B000700AE /* AccountManager+Edit.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF67620C62F4B000700AE /* AccountManager+Edit.m */; };
@@ -36,6 +38,7 @@
 		505EF6AB20C62F6C000700AE /* KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF6A520C62F6C000700AE /* KVOViewController.m */; };
 		505EF6AF20C62F9A000700AE /* KVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF6AE20C62F9A000700AE /* KVCViewController.m */; };
 		505EF6B220C63419000700AE /* KVCTestBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF6B120C63419000700AE /* KVCTestBean.m */; };
+		506A21B620EC62A20090C03C /* TimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 506A21B520EC62A20090C03C /* TimeViewController.m */; };
 		509CD30820C8CE1100D29595 /* iPadMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 509CD30720C8CE1100D29595 /* iPadMainViewController.m */; };
 		50BD3BE720F4FE5F00373854 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BD3BE620F4FE5F00373854 /* AnimationViewController.m */; };
 		50EDEB9F2100E6B70012F0A7 /* RuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EDEB9E2100E6B70012F0A7 /* RuntimeViewController.m */; };
@@ -66,6 +69,10 @@
 		50448CF720B6DD0700E4FFD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50448CFC20B6DD0700E4FFD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50448CFD20B6DD0700E4FFD0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		504B50792122C00E00514388 /* NSThreadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSThreadViewController.h; sourceTree = "<group>"; };
+		504B507A2122C00E00514388 /* NSThreadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSThreadViewController.m; sourceTree = "<group>"; };
+		504B507E2123FB8200514388 /* HLFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLFViewController.h; sourceTree = "<group>"; };
+		504B507F2123FB8200514388 /* HLFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLFViewController.m; sourceTree = "<group>"; };
 		505EF67120C62F4B000700AE /* AccountCellInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountCellInfo.h; sourceTree = "<group>"; };
 		505EF67220C62F4B000700AE /* AccountCellInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountCellInfo.m; sourceTree = "<group>"; };
 		505EF67320C62F4B000700AE /* AccountInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountInfo.h; sourceTree = "<group>"; };
@@ -104,6 +111,8 @@
 		505EF6AE20C62F9A000700AE /* KVCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCViewController.m; sourceTree = "<group>"; };
 		505EF6B020C63419000700AE /* KVCTestBean.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCTestBean.h; sourceTree = "<group>"; };
 		505EF6B120C63419000700AE /* KVCTestBean.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCTestBean.m; sourceTree = "<group>"; };
+		506A21B420EC62A20090C03C /* TimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeViewController.h; sourceTree = "<group>"; };
+		506A21B520EC62A20090C03C /* TimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeViewController.m; sourceTree = "<group>"; };
 		509CD30620C8CE1100D29595 /* iPadMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iPadMainViewController.h; sourceTree = "<group>"; };
 		509CD30720C8CE1100D29595 /* iPadMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPadMainViewController.m; sourceTree = "<group>"; };
 		50BD3BE520F4FE5F00373854 /* AnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
@@ -193,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				5015C879210DD34600843DA8 /* Resource */,
+				504B507C2123FB5800514388 /* Library */,
 				5018FBCC20DD45AC0083148E /* Define */,
 				509CD30520C8CDFB00D29595 /* iPadMain */,
 				505EF66E20C62F2F000700AE /* Tools */,
@@ -208,11 +218,39 @@
 			path = "Easy-All 2.0";
 			sourceTree = "<group>";
 		};
+		504B50782122BFFA00514388 /* NSThread */ = {
+			isa = PBXGroup;
+			children = (
+				504B50792122C00E00514388 /* NSThreadViewController.h */,
+				504B507A2122C00E00514388 /* NSThreadViewController.m */,
+			);
+			path = NSThread;
+			sourceTree = "<group>";
+		};
+		504B507C2123FB5800514388 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				504B507D2123FB7500514388 /* UIViewController */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		504B507D2123FB7500514388 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				504B507E2123FB8200514388 /* HLFViewController.h */,
+				504B507F2123FB8200514388 /* HLFViewController.m */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
 		505EF66D20C62EFA000700AE /* Test */ = {
 			isa = PBXGroup;
 			children = (
 				50EDEB9C2100E6AE0012F0A7 /* Runtime */,
 				50BD3BE420F4FE4B00373854 /* Animation */,
+				504B50782122BFFA00514388 /* NSThread */,
+				506A21B320EC625E0090C03C /* Time */,
 				505EF6AC20C62F92000700AE /* KVC */,
 				505EF69920C62F6C000700AE /* Copy */,
 				505EF69E20C62F6C000700AE /* GCD */,
@@ -348,6 +386,15 @@
 				505EF6B120C63419000700AE /* KVCTestBean.m */,
 			);
 			path = KVC;
+			sourceTree = "<group>";
+		};
+		506A21B320EC625E0090C03C /* Time */ = {
+			isa = PBXGroup;
+			children = (
+				506A21B420EC62A20090C03C /* TimeViewController.h */,
+				506A21B520EC62A20090C03C /* TimeViewController.m */,
+			);
+			path = Time;
 			sourceTree = "<group>";
 		};
 		509CD30520C8CDFB00D29595 /* iPadMain */ = {
@@ -515,9 +562,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				504B50802123FB8200514388 /* HLFViewController.m in Sources */,
 				505EF6AA20C62F6C000700AE /* KVOBean.m in Sources */,
 				50EDEB9F2100E6B70012F0A7 /* RuntimeViewController.m in Sources */,
 				505EF68B20C62F4B000700AE /* AccountCellInfo.m in Sources */,
+				506A21B620EC62A20090C03C /* TimeViewController.m in Sources */,
 				505EF68E20C62F4B000700AE /* AccountManager.m in Sources */,
 				509CD30820C8CE1100D29595 /* iPadMainViewController.m in Sources */,
 				505EF6AB20C62F6C000700AE /* KVOViewController.m in Sources */,
@@ -527,6 +576,7 @@
 				505EF6A920C62F6C000700AE /* GCDViewController.m in Sources */,
 				505EF69520C62F4B000700AE /* TallyHomeViewController.m in Sources */,
 				505EF6B220C63419000700AE /* KVCTestBean.m in Sources */,
+				504B507B2122C00E00514388 /* NSThreadViewController.m in Sources */,
 				505EF6A820C62F6C000700AE /* CopyViewController.m in Sources */,
 				505EF6AF20C62F9A000700AE /* KVCViewController.m in Sources */,
 				505EF6A620C62F6C000700AE /* SDImageViewController.m in Sources */,

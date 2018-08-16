@@ -6,8 +6,8 @@
 //  Copyright © 2018年 陈舒澳. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "HLFViewController.h"
 
-@interface TallyHomeViewController : UIViewController
+@interface TallyHomeViewController : HLFViewController
 
 @end

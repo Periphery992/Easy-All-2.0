@@ -54,8 +54,6 @@
     }];
     
     
-    
-    
     NSInvocationOperation *invocationOperation = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(task:) object:@"Hello, World!"];
     
     [queue addOperation:operation];
