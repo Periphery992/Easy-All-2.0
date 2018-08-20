@@ -12,12 +12,15 @@
 		50114175212ABFAB00504435 /* HLFPhotoLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50114172212ABFAB00504435 /* HLFPhotoLineView.m */; };
 		50114179212AD1F300504435 /* HLFPhotoOperationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 50114178212AD1F300504435 /* HLFPhotoOperationBar.m */; };
 		5011417D212AD97B00504435 /* UIButton+EasySet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5011417C212AD97B00504435 /* UIButton+EasySet.m */; };
+		5015C87E210DD3AE00843DA8 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5015C880210DD3AE00843DA8 /* Localized.strings */; };
+		5015C887210E0A6A00843DA8 /* RuntimeBean+Property.m in Sources */ = {isa = PBXBuildFile; fileRef = 5015C886210E0A6A00843DA8 /* RuntimeBean+Property.m */; };
 		501EED3720B6E04D003FAD06 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 501EED3620B6E04D003FAD06 /* MainViewController.m */; };
 		5028619E20BC350E006EABBA /* MainToolBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 5028619920BC350E006EABBA /* MainToolBean.m */; };
 		5028619F20BC350E006EABBA /* MainList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5028619A20BC350E006EABBA /* MainList.plist */; };
 		502861A020BC350E006EABBA /* MainTypeBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 5028619C20BC350E006EABBA /* MainTypeBean.m */; };
 		502A1DC0212A6703009A9069 /* UIView+subView.m in Sources */ = {isa = PBXBuildFile; fileRef = 502A1DBF212A6703009A9069 /* UIView+subView.m */; };
 		503D05AA212ABEF600A5308B /* HLFPhotoStitchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 503D05A9212ABEF600A5308B /* HLFPhotoStitchVC.m */; };
+		50338CDB21078583003A47F2 /* RuntimeBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 50338CDA21078583003A47F2 /* RuntimeBean.m */; };
 		50448CF020B6DD0700E4FFD0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50448CEF20B6DD0700E4FFD0 /* AppDelegate.m */; };
 		50448CF820B6DD0700E4FFD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50448CF720B6DD0700E4FFD0 /* Assets.xcassets */; };
 		50448CFE20B6DD0700E4FFD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50448CFD20B6DD0700E4FFD0 /* main.m */; };
@@ -46,6 +49,8 @@
 		505EF6B220C63419000700AE /* KVCTestBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF6B120C63419000700AE /* KVCTestBean.m */; };
 		506A21B620EC62A20090C03C /* TimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 506A21B520EC62A20090C03C /* TimeViewController.m */; };
 		509CD30820C8CE1100D29595 /* iPadMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 509CD30720C8CE1100D29595 /* iPadMainViewController.m */; };
+		50BD3BE720F4FE5F00373854 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BD3BE620F4FE5F00373854 /* AnimationViewController.m */; };
+		50EDEB9F2100E6B70012F0A7 /* RuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EDEB9E2100E6B70012F0A7 /* RuntimeViewController.m */; };
 		551BB02520BDBB520004E55B /* MainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 551BB02420BDBB520004E55B /* MainManager.m */; };
 		9057B2D420CA5C103DC0D081 /* libPods-Easy-All 2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F940BCCFA6EEE85C79177D88 /* libPods-Easy-All 2.0.a */; };
 /* End PBXBuildFile section */
@@ -61,6 +66,10 @@
 		50114178212AD1F300504435 /* HLFPhotoOperationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLFPhotoOperationBar.m; sourceTree = "<group>"; };
 		5011417B212AD97B00504435 /* UIButton+EasySet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+EasySet.h"; sourceTree = "<group>"; };
 		5011417C212AD97B00504435 /* UIButton+EasySet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EasySet.m"; sourceTree = "<group>"; };
+		5015C87F210DD3AE00843DA8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localized.strings; sourceTree = "<group>"; };
+		5015C881210DD3BE00843DA8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localized.strings"; sourceTree = "<group>"; };
+		5015C885210E0A6A00843DA8 /* RuntimeBean+Property.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RuntimeBean+Property.h"; sourceTree = "<group>"; };
+		5015C886210E0A6A00843DA8 /* RuntimeBean+Property.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RuntimeBean+Property.m"; sourceTree = "<group>"; };
 		5018FBCD20DD45AC0083148E /* UIColorDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColorDefine.h; sourceTree = "<group>"; };
 		5018FBCE20DD45AC0083148E /* UIDeviceDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDeviceDefine.h; sourceTree = "<group>"; };
 		501EED3520B6E04D003FAD06 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -75,6 +84,8 @@
 		502A1DBF212A6703009A9069 /* UIView+subView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+subView.m"; sourceTree = "<group>"; };
 		503D05A8212ABEF600A5308B /* HLFPhotoStitchVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLFPhotoStitchVC.h; sourceTree = "<group>"; };
 		503D05A9212ABEF600A5308B /* HLFPhotoStitchVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLFPhotoStitchVC.m; sourceTree = "<group>"; };
+		50338CD921078583003A47F2 /* RuntimeBean.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeBean.h; sourceTree = "<group>"; };
+		50338CDA21078583003A47F2 /* RuntimeBean.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeBean.m; sourceTree = "<group>"; };
 		50448CEB20B6DD0700E4FFD0 /* Easy-All 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy-All 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50448CEE20B6DD0700E4FFD0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		50448CEF20B6DD0700E4FFD0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -131,6 +142,10 @@
 		506A21B520EC62A20090C03C /* TimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeViewController.m; sourceTree = "<group>"; };
 		509CD30620C8CE1100D29595 /* iPadMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iPadMainViewController.h; sourceTree = "<group>"; };
 		509CD30720C8CE1100D29595 /* iPadMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPadMainViewController.m; sourceTree = "<group>"; };
+		50BD3BE520F4FE5F00373854 /* AnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
+		50BD3BE620F4FE5F00373854 /* AnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
+		50EDEB9D2100E6B70012F0A7 /* RuntimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeViewController.h; sourceTree = "<group>"; };
+		50EDEB9E2100E6B70012F0A7 /* RuntimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeViewController.m; sourceTree = "<group>"; };
 		551BB02320BDBB520004E55B /* MainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainManager.h; sourceTree = "<group>"; };
 		551BB02420BDBB520004E55B /* MainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainManager.m; sourceTree = "<group>"; };
 		714641612C3BD83443100705 /* Pods-Easy-All 2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy-All 2.0.release.xcconfig"; path = "Pods/Target Support Files/Pods-Easy-All 2.0/Pods-Easy-All 2.0.release.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +211,12 @@
 				5011417C212AD97B00504435 /* UIButton+EasySet.m */,
 			);
 			path = UIButton;
+		5015C879210DD34600843DA8 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				5015C880210DD3AE00843DA8 /* Localized.strings */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		5018FBCC20DD45AC0083148E /* Define */ = {
@@ -263,6 +284,7 @@
 		50448CED20B6DD0700E4FFD0 /* Easy-All 2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				5015C879210DD34600843DA8 /* Resource */,
 				504B507C2123FB5800514388 /* Library */,
 				5018FBCC20DD45AC0083148E /* Define */,
 				509CD30520C8CDFB00D29595 /* iPadMain */,
@@ -339,6 +361,8 @@
 		505EF66D20C62EFA000700AE /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				50EDEB9C2100E6AE0012F0A7 /* Runtime */,
+				50BD3BE420F4FE4B00373854 /* Animation */,
 				504B50782122BFFA00514388 /* NSThread */,
 				506A21B320EC625E0090C03C /* Time */,
 				505EF6AC20C62F92000700AE /* KVC */,
@@ -497,6 +521,28 @@
 			path = iPadMain;
 			sourceTree = "<group>";
 		};
+		50BD3BE420F4FE4B00373854 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				50BD3BE520F4FE5F00373854 /* AnimationViewController.h */,
+				50BD3BE620F4FE5F00373854 /* AnimationViewController.m */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		50EDEB9C2100E6AE0012F0A7 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				50EDEB9D2100E6B70012F0A7 /* RuntimeViewController.h */,
+				50EDEB9E2100E6B70012F0A7 /* RuntimeViewController.m */,
+				50338CD921078583003A47F2 /* RuntimeBean.h */,
+				50338CDA21078583003A47F2 /* RuntimeBean.m */,
+				5015C885210E0A6A00843DA8 /* RuntimeBean+Property.h */,
+				5015C886210E0A6A00843DA8 /* RuntimeBean+Property.m */,
+			);
+			path = Runtime;
+			sourceTree = "<group>";
+		};
 		83266495931E1BBAE607A81D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -550,6 +596,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 50448CE220B6DD0700E4FFD0;
 			productRefGroup = 50448CEC20B6DD0700E4FFD0 /* Products */;
@@ -566,6 +613,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5015C87E210DD3AE00843DA8 /* Localized.strings in Resources */,
 				50448CF820B6DD0700E4FFD0 /* Assets.xcassets in Resources */,
 				5028619F20BC350E006EABBA /* MainList.plist in Resources */,
 			);
@@ -632,6 +680,7 @@
 				5011417D212AD97B00504435 /* UIButton+EasySet.m in Sources */,
 				504B50802123FB8200514388 /* HLFViewController.m in Sources */,
 				505EF6AA20C62F6C000700AE /* KVOBean.m in Sources */,
+				50EDEB9F2100E6B70012F0A7 /* RuntimeViewController.m in Sources */,
 				505EF68B20C62F4B000700AE /* AccountCellInfo.m in Sources */,
 				506A21B620EC62A20090C03C /* TimeViewController.m in Sources */,
 				50114175212ABFAB00504435 /* HLFPhotoLineView.m in Sources */,
@@ -639,6 +688,7 @@
 				509CD30820C8CE1100D29595 /* iPadMainViewController.m in Sources */,
 				505EF6AB20C62F6C000700AE /* KVOViewController.m in Sources */,
 				505EF68C20C62F4B000700AE /* AccountInfo.m in Sources */,
+				5015C887210E0A6A00843DA8 /* RuntimeBean+Property.m in Sources */,
 				505EF68F20C62F4B000700AE /* AccountEditNameCell.m in Sources */,
 				505EF6A920C62F6C000700AE /* GCDViewController.m in Sources */,
 				505EF69520C62F4B000700AE /* TallyHomeViewController.m in Sources */,
@@ -653,10 +703,12 @@
 				505EF69220C62F4B000700AE /* AccountEditViewController.m in Sources */,
 				501EED3720B6E04D003FAD06 /* MainViewController.m in Sources */,
 				551BB02520BDBB520004E55B /* MainManager.m in Sources */,
+				50BD3BE720F4FE5F00373854 /* AnimationViewController.m in Sources */,
 				502861A020BC350E006EABBA /* MainTypeBean.m in Sources */,
 				5028619E20BC350E006EABBA /* MainToolBean.m in Sources */,
 				505EF69420C62F4B000700AE /* AccountHomeViewController.m in Sources */,
 				50114179212AD1F300504435 /* HLFPhotoOperationBar.m in Sources */,
+				50338CDB21078583003A47F2 /* RuntimeBean.m in Sources */,
 				505EF69020C62F4B000700AE /* AccountEditNormalCell.m in Sources */,
 				505EF69320C62F4B000700AE /* AccountTypeViewController.m in Sources */,
 				505EF69120C62F4B000700AE /* AccountEditViewController+CellDelegate.m in Sources */,
@@ -672,11 +724,24 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		5015C880210DD3AE00843DA8 /* Localized.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5015C87F210DD3AE00843DA8 /* en */,
+				5015C881210DD3BE00843DA8 /* zh-Hans */,
+			);
+			name = Localized.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		50448CFF20B6DD0700E4FFD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -732,6 +797,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -786,6 +852,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = UNB348Y3D7;
 				GCC_PREFIX_HEADER = "Easy-All 2.0/PrefixHeader.pch";
 				INFOPLIST_FILE = "Easy-All 2.0/Info.plist";

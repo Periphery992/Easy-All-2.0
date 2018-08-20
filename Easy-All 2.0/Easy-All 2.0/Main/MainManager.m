@@ -10,6 +10,16 @@
 
 @implementation MainManager
 
++ (instancetype)sharedInstance{
+    
+    static id _sharedInstance = nil;
+    static dispatch_once_t oncePredicate;
+    dispatch_once(&oncePredicate, ^{
+        _sharedInstance = [[[self class] alloc] init];
+    });
+    return _sharedInstance;
+}
+
 - (NSInteger)getTypeCount
 {
     return self.mainListArrays.count;
@@ -41,11 +51,8 @@
     if (!_mainListArrays)
     {
         _mainListArrays = ({
-            
-            NSMutableArray *mainListArrays = [[NSMutableArray alloc]init];
-            
             NSString *path = [[NSBundle mainBundle] pathForResource:@"MainList.plist" ofType:nil];
-            mainListArrays = [MainTypeBean mj_objectArrayWithKeyValuesArray:[NSMutableArray arrayWithContentsOfFile:path]];
+            NSMutableArray *mainListArrays = [MainTypeBean mj_objectArrayWithKeyValuesArray:[NSMutableArray arrayWithContentsOfFile:path]];
             
             mainListArrays;
         });

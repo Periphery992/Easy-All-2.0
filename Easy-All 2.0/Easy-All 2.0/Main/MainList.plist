@@ -39,6 +39,17 @@
 			</dict>
 			<dict>
 				<key>name</key>
+				<string>Animation</string>
+				<key>viewController</key>
+				<string>AnimationViewController</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Runtime</string>
+				<key>viewController</key>
+				<string>RuntimeViewController</string>
+			</dict>
+			<dict>
 				<string>NSThread</string>
 				<key>viewController</key>
 				<string>NSThreadViewController</string>
