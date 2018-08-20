@@ -62,6 +62,12 @@
 				<key>viewController</key>
 				<string>TallyHomeViewController</string>
 			</dict>
+			<dict>
+				<key>name</key>
+				<string>Photo</string>
+				<key>viewController</key>
+				<string>HLFPhotoHomeVC</string>
+			</dict>
 		</array>
 	</dict>
 </array>

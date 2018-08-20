@@ -29,6 +29,9 @@
  */
 - (void)viewWillAppearAgain;
 
+#pragma mark - push
+- (void)pushToViewControllerWithClass:(Class)vcClass animated:(BOOL)animated;
+
 #pragma mark - Back/Pop
 /**
  返回上一页

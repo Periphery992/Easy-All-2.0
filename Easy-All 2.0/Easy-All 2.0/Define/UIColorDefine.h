@@ -21,4 +21,9 @@
                                                           blue:((float)(rgbValue & 0xFF)) / 255.0 \
                                                          alpha:alp]
 
+
+#pragma mark - Usually Color
+#define HLFColor_Black  [UIColor blackColor]
+#define HLFColor_Red  [UIColor redColor]
+
 #endif /* UIColorDefine_h */

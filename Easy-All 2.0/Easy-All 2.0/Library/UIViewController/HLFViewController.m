@@ -20,6 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = NSStringFromClass([self class]);
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -90,6 +91,16 @@
 #pragma mark - Delegate Methods
 
 #pragma mark - Public Methods
+
+#pragma mark - push
+- (void)pushToViewControllerWithClass:(Class)vcClass animated:(BOOL)animated
+{
+    UIViewController *vc = nil;
+    vc = [[[vcClass class] alloc]init];
+    [vc setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 #pragma mark - Back/Pop
 //返回
 - (void)backViewControllerAnimated:(BOOL)animated completion:(void(^)(void))completion

@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50114173212ABFAB00504435 /* HLFImageCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5011416E212ABFAB00504435 /* HLFImageCVCell.m */; };
+		50114174212ABFAB00504435 /* HLFImageProcessorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50114170212ABFAB00504435 /* HLFImageProcessorView.m */; };
+		50114175212ABFAB00504435 /* HLFPhotoLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50114172212ABFAB00504435 /* HLFPhotoLineView.m */; };
+		50114179212AD1F300504435 /* HLFPhotoOperationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 50114178212AD1F300504435 /* HLFPhotoOperationBar.m */; };
+		5011417D212AD97B00504435 /* UIButton+EasySet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5011417C212AD97B00504435 /* UIButton+EasySet.m */; };
 		501EED3720B6E04D003FAD06 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 501EED3620B6E04D003FAD06 /* MainViewController.m */; };
 		5028619E20BC350E006EABBA /* MainToolBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 5028619920BC350E006EABBA /* MainToolBean.m */; };
 		5028619F20BC350E006EABBA /* MainList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5028619A20BC350E006EABBA /* MainList.plist */; };
 		502861A020BC350E006EABBA /* MainTypeBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 5028619C20BC350E006EABBA /* MainTypeBean.m */; };
+		502A1DC0212A6703009A9069 /* UIView+subView.m in Sources */ = {isa = PBXBuildFile; fileRef = 502A1DBF212A6703009A9069 /* UIView+subView.m */; };
+		503D05AA212ABEF600A5308B /* HLFPhotoStitchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 503D05A9212ABEF600A5308B /* HLFPhotoStitchVC.m */; };
 		50448CF020B6DD0700E4FFD0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50448CEF20B6DD0700E4FFD0 /* AppDelegate.m */; };
 		50448CF820B6DD0700E4FFD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50448CF720B6DD0700E4FFD0 /* Assets.xcassets */; };
 		50448CFE20B6DD0700E4FFD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50448CFD20B6DD0700E4FFD0 /* main.m */; };
 		504B507B2122C00E00514388 /* NSThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 504B507A2122C00E00514388 /* NSThreadViewController.m */; };
 		504B50802123FB8200514388 /* HLFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 504B507F2123FB8200514388 /* HLFViewController.m */; };
+		504B50882126639300514388 /* HLFPhotoHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 504B50872126639300514388 /* HLFPhotoHomeVC.m */; };
+		504B508B212663AA00514388 /* HLFPhotoEditVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 504B508A212663AA00514388 /* HLFPhotoEditVC.m */; };
 		505EF68B20C62F4B000700AE /* AccountCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF67220C62F4B000700AE /* AccountCellInfo.m */; };
 		505EF68C20C62F4B000700AE /* AccountInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF67420C62F4B000700AE /* AccountInfo.m */; };
 		505EF68D20C62F4B000700AE /* AccountManager+Edit.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF67620C62F4B000700AE /* AccountManager+Edit.m */; };
@@ -42,6 +51,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5011416D212ABFAB00504435 /* HLFImageCVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLFImageCVCell.h; sourceTree = "<group>"; };
+		5011416E212ABFAB00504435 /* HLFImageCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLFImageCVCell.m; sourceTree = "<group>"; };
+		5011416F212ABFAB00504435 /* HLFImageProcessorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLFImageProcessorView.h; sourceTree = "<group>"; };
+		50114170212ABFAB00504435 /* HLFImageProcessorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLFImageProcessorView.m; sourceTree = "<group>"; };
+		50114171212ABFAB00504435 /* HLFPhotoLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLFPhotoLineView.h; sourceTree = "<group>"; };
+		50114172212ABFAB00504435 /* HLFPhotoLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLFPhotoLineView.m; sourceTree = "<group>"; };
+		50114177212AD1F300504435 /* HLFPhotoOperationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLFPhotoOperationBar.h; sourceTree = "<group>"; };
+		50114178212AD1F300504435 /* HLFPhotoOperationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLFPhotoOperationBar.m; sourceTree = "<group>"; };
+		5011417B212AD97B00504435 /* UIButton+EasySet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+EasySet.h"; sourceTree = "<group>"; };
+		5011417C212AD97B00504435 /* UIButton+EasySet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EasySet.m"; sourceTree = "<group>"; };
 		5018FBCD20DD45AC0083148E /* UIColorDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColorDefine.h; sourceTree = "<group>"; };
 		5018FBCE20DD45AC0083148E /* UIDeviceDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDeviceDefine.h; sourceTree = "<group>"; };
 		501EED3520B6E04D003FAD06 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -52,6 +71,10 @@
 		5028619B20BC350E006EABBA /* MainTypeBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTypeBean.h; sourceTree = "<group>"; };
 		5028619C20BC350E006EABBA /* MainTypeBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTypeBean.m; sourceTree = "<group>"; };
 		5028619D20BC350E006EABBA /* MainToolBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainToolBean.h; sourceTree = "<group>"; };
+		502A1DBE212A6703009A9069 /* UIView+subView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+subView.h"; sourceTree = "<group>"; };
+		502A1DBF212A6703009A9069 /* UIView+subView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+subView.m"; sourceTree = "<group>"; };
+		503D05A8212ABEF600A5308B /* HLFPhotoStitchVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLFPhotoStitchVC.h; sourceTree = "<group>"; };
+		503D05A9212ABEF600A5308B /* HLFPhotoStitchVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLFPhotoStitchVC.m; sourceTree = "<group>"; };
 		50448CEB20B6DD0700E4FFD0 /* Easy-All 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy-All 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50448CEE20B6DD0700E4FFD0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		50448CEF20B6DD0700E4FFD0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,6 +85,10 @@
 		504B507A2122C00E00514388 /* NSThreadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSThreadViewController.m; sourceTree = "<group>"; };
 		504B507E2123FB8200514388 /* HLFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLFViewController.h; sourceTree = "<group>"; };
 		504B507F2123FB8200514388 /* HLFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLFViewController.m; sourceTree = "<group>"; };
+		504B50862126639300514388 /* HLFPhotoHomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLFPhotoHomeVC.h; sourceTree = "<group>"; };
+		504B50872126639300514388 /* HLFPhotoHomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLFPhotoHomeVC.m; sourceTree = "<group>"; };
+		504B5089212663AA00514388 /* HLFPhotoEditVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLFPhotoEditVC.h; sourceTree = "<group>"; };
+		504B508A212663AA00514388 /* HLFPhotoEditVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLFPhotoEditVC.m; sourceTree = "<group>"; };
 		505EF67120C62F4B000700AE /* AccountCellInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountCellInfo.h; sourceTree = "<group>"; };
 		505EF67220C62F4B000700AE /* AccountCellInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountCellInfo.m; sourceTree = "<group>"; };
 		505EF67320C62F4B000700AE /* AccountInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountInfo.h; sourceTree = "<group>"; };
@@ -132,6 +159,45 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5011416B212ABFAB00504435 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5011416C212ABFAB00504435 /* Cell */,
+				5011416F212ABFAB00504435 /* HLFImageProcessorView.h */,
+				50114170212ABFAB00504435 /* HLFImageProcessorView.m */,
+				50114171212ABFAB00504435 /* HLFPhotoLineView.h */,
+				50114172212ABFAB00504435 /* HLFPhotoLineView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5011416C212ABFAB00504435 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5011416D212ABFAB00504435 /* HLFImageCVCell.h */,
+				5011416E212ABFAB00504435 /* HLFImageCVCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		50114176212AD1AC00504435 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				50114177212AD1F300504435 /* HLFPhotoOperationBar.h */,
+				50114178212AD1F300504435 /* HLFPhotoOperationBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5011417A212AD8DB00504435 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				5011417B212AD97B00504435 /* UIButton+EasySet.h */,
+				5011417C212AD97B00504435 /* UIButton+EasySet.m */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
 		5018FBCC20DD45AC0083148E /* Define */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +221,25 @@
 				551BB02420BDBB520004E55B /* MainManager.m */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		502A1DBD212A66F2009A9069 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				502A1DBE212A6703009A9069 /* UIView+subView.h */,
+				502A1DBF212A6703009A9069 /* UIView+subView.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		503D05A7212ABED500A5308B /* Stitch */ = {
+			isa = PBXGroup;
+			children = (
+				5011416B212ABFAB00504435 /* View */,
+				503D05A8212ABEF600A5308B /* HLFPhotoStitchVC.h */,
+				503D05A9212ABEF600A5308B /* HLFPhotoStitchVC.m */,
+			);
+			path = Stitch;
 			sourceTree = "<group>";
 		};
 		50448CE220B6DD0700E4FFD0 = {
@@ -206,6 +291,8 @@
 		504B507C2123FB5800514388 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				5011417A212AD8DB00504435 /* UIButton */,
+				502A1DBD212A66F2009A9069 /* UIView */,
 				504B507D2123FB7500514388 /* UIViewController */,
 			);
 			path = Library;
@@ -218,6 +305,35 @@
 				504B507F2123FB8200514388 /* HLFViewController.m */,
 			);
 			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		504B50832126634300514388 /* PhotoHanding */ = {
+			isa = PBXGroup;
+			children = (
+				503D05A7212ABED500A5308B /* Stitch */,
+				504B50852126637C00514388 /* Edit */,
+				504B50842126635800514388 /* Home */,
+			);
+			path = PhotoHanding;
+			sourceTree = "<group>";
+		};
+		504B50842126635800514388 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				504B50862126639300514388 /* HLFPhotoHomeVC.h */,
+				504B50872126639300514388 /* HLFPhotoHomeVC.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		504B50852126637C00514388 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				50114176212AD1AC00504435 /* View */,
+				504B5089212663AA00514388 /* HLFPhotoEditVC.h */,
+				504B508A212663AA00514388 /* HLFPhotoEditVC.m */,
+			);
+			path = Edit;
 			sourceTree = "<group>";
 		};
 		505EF66D20C62EFA000700AE /* Test */ = {
@@ -237,6 +353,7 @@
 		505EF66E20C62F2F000700AE /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				504B50832126634300514388 /* PhotoHanding */,
 				505EF66F20C62F4B000700AE /* Account */,
 				505EF68720C62F4B000700AE /* Tally */,
 			);
@@ -512,10 +629,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5011417D212AD97B00504435 /* UIButton+EasySet.m in Sources */,
 				504B50802123FB8200514388 /* HLFViewController.m in Sources */,
 				505EF6AA20C62F6C000700AE /* KVOBean.m in Sources */,
 				505EF68B20C62F4B000700AE /* AccountCellInfo.m in Sources */,
 				506A21B620EC62A20090C03C /* TimeViewController.m in Sources */,
+				50114175212ABFAB00504435 /* HLFPhotoLineView.m in Sources */,
 				505EF68E20C62F4B000700AE /* AccountManager.m in Sources */,
 				509CD30820C8CE1100D29595 /* iPadMainViewController.m in Sources */,
 				505EF6AB20C62F6C000700AE /* KVOViewController.m in Sources */,
@@ -529,6 +648,7 @@
 				505EF6AF20C62F9A000700AE /* KVCViewController.m in Sources */,
 				505EF6A620C62F6C000700AE /* SDImageViewController.m in Sources */,
 				505EF68D20C62F4B000700AE /* AccountManager+Edit.m in Sources */,
+				502A1DC0212A6703009A9069 /* UIView+subView.m in Sources */,
 				50448CFE20B6DD0700E4FFD0 /* main.m in Sources */,
 				505EF69220C62F4B000700AE /* AccountEditViewController.m in Sources */,
 				501EED3720B6E04D003FAD06 /* MainViewController.m in Sources */,
@@ -536,10 +656,16 @@
 				502861A020BC350E006EABBA /* MainTypeBean.m in Sources */,
 				5028619E20BC350E006EABBA /* MainToolBean.m in Sources */,
 				505EF69420C62F4B000700AE /* AccountHomeViewController.m in Sources */,
+				50114179212AD1F300504435 /* HLFPhotoOperationBar.m in Sources */,
 				505EF69020C62F4B000700AE /* AccountEditNormalCell.m in Sources */,
 				505EF69320C62F4B000700AE /* AccountTypeViewController.m in Sources */,
 				505EF69120C62F4B000700AE /* AccountEditViewController+CellDelegate.m in Sources */,
 				505EF6A720C62F6C000700AE /* CopyBean.m in Sources */,
+				504B508B212663AA00514388 /* HLFPhotoEditVC.m in Sources */,
+				503D05AA212ABEF600A5308B /* HLFPhotoStitchVC.m in Sources */,
+				50114174212ABFAB00504435 /* HLFImageProcessorView.m in Sources */,
+				50114173212ABFAB00504435 /* HLFImageCVCell.m in Sources */,
+				504B50882126639300514388 /* HLFPhotoHomeVC.m in Sources */,
 				50448CF020B6DD0700E4FFD0 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
