@@ -45,7 +45,7 @@
         [self addSubview:self.btnBottom];
         
         [self addSubview:self.btnAdd];
-        [self addSubview:self.btnReduce];
+        [self addSubview:self.btnAddMore];
         [self addSubview:self.btnReduce];
         [self addSubview:self.btnReduceMore];
         
@@ -84,7 +84,7 @@
 
 - (void)touchBtnScale
 {
-    if (!self.btnLocation.selected)
+    if (!self.btnScale.selected)
     {
         self.btnScale.selected = YES;
         self.btnLocation.selected = NO;
@@ -114,12 +114,32 @@
     {
         operation = HLFPhotoOperationBarOperationUp;
     }
-    else if (operationBtn == self.btnRight)
+    else if (operationBtn == self.btnBottom)
     {
         operation = HLFPhotoOperationBarOperationDown;
     }
-
-    [self.delegate photoOperationBarWithOperation:operation number:[self.lblNumber.text integerValue]];
+    else if (operationBtn == self.btnAdd)
+    {
+        self.lblNumber.text = [NSString stringWithFormat:@"%0.1f",[self.lblNumber.text floatValue]+0.1];
+        return;
+    }
+    else if (operationBtn == self.btnAddMore)
+    {
+        self.lblNumber.text = [NSString stringWithFormat:@"%0.1f",[self.lblNumber.text floatValue]+1.0];
+        return;
+    }
+    else if (operationBtn == self.btnReduce)
+    {
+        self.lblNumber.text = [NSString stringWithFormat:@"%0.1f",[self.lblNumber.text floatValue]-0.1];
+        return;
+    }
+    else if (operationBtn == self.btnReduceMore)
+    {
+        self.lblNumber.text = [NSString stringWithFormat:@"%0.1f",[self.lblNumber.text floatValue]-1];
+        return;
+    }
+    
+    [self.delegate photoOperationBarWithOperation:operation number:[self.lblNumber.text floatValue]];
 }
 
 #pragma mark - Layout Methods
@@ -152,7 +172,45 @@
         make.width.mas_offset(50);
     }];
     
+    [self.btnLeft mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(self.lblNumber.mas_left);
+        make.centerY.mas_equalTo(self.lblNumber);
+    }];
     
+    [self.btnRight mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.lblNumber.mas_right);
+        make.centerY.mas_equalTo(self.lblNumber);
+    }];
+
+    [self.btnTop mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.mas_equalTo(self.lblNumber.mas_top);
+        make.centerX.mas_equalTo(self.lblNumber);
+    }];
+
+    [self.btnBottom mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.lblNumber.mas_bottom);
+        make.centerX.mas_equalTo(self.lblNumber);
+    }];
+
+    [self.btnAdd mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.btnRight.mas_right);
+        make.centerY.mas_equalTo(self.lblNumber);
+    }];
+
+    [self.btnAddMore mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.btnAdd.mas_right);
+        make.centerY.mas_equalTo(self.lblNumber);
+    }];
+
+    [self.btnReduce mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(self.btnLeft.mas_left);
+        make.centerY.mas_equalTo(self.lblNumber);
+    }];
+
+    [self.btnReduceMore mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(self.btnReduce.mas_left);
+        make.centerY.mas_equalTo(self.lblNumber);
+    }];
 }
 
 
@@ -250,6 +308,7 @@
             UIButton *button = [[UIButton alloc]init];
             [button setSelectedTitle:@"左"];
             [button setNormalTitle:@"小"];
+            [button setNormalTitleColor:HLFColor_Black];
             [button addTouchUpInsideTarget:self action:@selector(touchOperationBtn:)];
             button.selected = YES;
             button;
@@ -267,6 +326,7 @@
             UIButton *button = [[UIButton alloc]init];
             [button setSelectedTitle:@"右"];
             [button setNormalTitle:@"大"];
+            [button setNormalTitleColor:HLFColor_Black];
             [button addTouchUpInsideTarget:self action:@selector(touchOperationBtn:)];
             button.selected = YES;
             button;
@@ -283,6 +343,7 @@
             
             UIButton *button = [[UIButton alloc]init];
             [button setNormalTitle:@"下"];
+            [button setNormalTitleColor:HLFColor_Black];
             [button addTouchUpInsideTarget:self action:@selector(touchOperationBtn:)];
             button.selected = YES;
             button;
@@ -299,6 +360,7 @@
             
             UIButton *button = [[UIButton alloc]init];
             [button setNormalTitle:@"+0.1"];
+            [button setNormalTitleColor:HLFColor_Black];
             [button addTouchUpInsideTarget:self action:@selector(touchOperationBtn:)];
             button;
         });
@@ -314,6 +376,7 @@
     
             UIButton *button = [[UIButton alloc]init];
             [button setNormalTitle:@"+1"];
+            [button setNormalTitleColor:HLFColor_Black];
             [button addTouchUpInsideTarget:self action:@selector(touchOperationBtn:)];
             button;
         });
@@ -329,6 +392,7 @@
             
             UIButton *button = [[UIButton alloc]init];
             [button setNormalTitle:@"-0.1"];
+            [button setNormalTitleColor:HLFColor_Black];
             [button addTouchUpInsideTarget:self action:@selector(touchOperationBtn:)];
             button;
         });
@@ -344,6 +408,7 @@
             
             UIButton *button = [[UIButton alloc]init];
             [button setNormalTitle:@"-1"];
+            [button setNormalTitleColor:HLFColor_Black];
             [button addTouchUpInsideTarget:self action:@selector(touchOperationBtn:)];
             button;
         });

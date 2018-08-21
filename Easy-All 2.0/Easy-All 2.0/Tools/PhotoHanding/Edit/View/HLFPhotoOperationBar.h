@@ -10,6 +10,7 @@
 
 typedef enum : NSUInteger {
     HLFPhotoOperationBarOperationAddImage,
+    HLFPhotoOperationBarOperationSave,
     HLFPhotoOperationBarOperationLocation,
     HLFPhotoOperationBarOperationScale,
     HLFPhotoOperationBarOperationUp,
