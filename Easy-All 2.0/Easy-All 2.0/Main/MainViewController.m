@@ -12,7 +12,6 @@
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableview;
 @property (nonatomic, strong) MainManager *mainManager;
-@property (nonatomic, strong) dispatch_source_t timer;
 
 @end
 
@@ -22,10 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = NSLocalizedString(@"首页", nil);
-    
     self.mainManager = [[MainManager alloc] init];
-    
     
     [self.view addSubview:self.tableview];
     [self setDefaultConstraints];

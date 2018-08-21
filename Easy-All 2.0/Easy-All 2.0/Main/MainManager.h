@@ -11,12 +11,7 @@
 
 @interface MainManager : NSObject
 @property (nonatomic, strong) NSMutableArray *mainListArrays;
-@property (nonatomic, strong) void (^testBlock)(int x);
 
-
-+ (instancetype)sharedInstance;
-
-- (instancetype)initWithTestBlock:(void(^)(int x))testBlock;
 /**
  获取类别总数
 

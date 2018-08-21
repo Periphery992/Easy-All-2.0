@@ -19,59 +19,14 @@
 //    [self asyncSerial];
 //    [self syncConcurrent];
 //    [self syncConcurrent];
-//    [self asyncMain];
-//    [self apply];
-    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
-    [queue setMaxConcurrentOperationCount:5];
-
-    NSBlockOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
-        for (int i = 0; i < 100; i++)
-        {
-            NSLog(@"Task1 %@ %d", [NSThread currentThread], i);
-        }
-    }];
     
-    NSBlockOperation *operation2 = [NSBlockOperation blockOperationWithBlock:^{
-        for (int i = 0; i < 100; i++)
-        {
-            NSLog(@"Task3 %@ %d", [NSThread currentThread], i);
-        }
-    }];
-    
-    NSBlockOperation *operation3 = [NSBlockOperation blockOperationWithBlock:^{
-        for (int i = 0; i < 100; i++)
-        {
-            NSLog(@"Task3 %@ %d", [NSThread currentThread], i);
-        }
-    }];
-    
-    
-    NSBlockOperation *operation4 = [NSBlockOperation blockOperationWithBlock:^{
-        for (int i = 0; i < 100; i++)
-        {
-            NSLog(@"Task3 %@ %d", [NSThread currentThread], i);
-        }
-    }];
-    
-    
-    NSInvocationOperation *invocationOperation = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(task:) object:@"Hello, World!"];
-    
-    [queue addOperation:operation];
-    [queue addOperation:invocationOperation];
-    [queue addOperation:operation2];
-    [queue addOperation:operation3];
-    [queue addOperation:operation4];
 }
 
-- (void)task:(NSString*)task
-{
-    for (int i = 0; i < 100; i++)
-    {
-        NSLog(@"Task2 %@ %d %@", [NSThread currentThread], i, task);
-    }
-}
+#pragma mark - Delegate Methods
 
-#pragma mark - dispatch_async/dispatch_sync
+#pragma mark - Public Methods
+
+#pragma mark - Private Methods
 //异步执行 + 并行队列
 - (void)asyncConcurrent
 {
@@ -111,7 +66,7 @@
     //创建一个串行队列
     dispatch_queue_t queue = dispatch_queue_create("asyncSerial", DISPATCH_QUEUE_SERIAL);
     
-    DDLogInfo(@"---asyncSerial start---");
+    DDLogInfo(@"---asyncSerial start---%@", [NSThread currentThread]);
     //使用异步函数封装三个任务
     dispatch_async(queue, ^{
         DDLogInfo(@"asyncSerial 任务1---%@", [NSThread currentThread]);
@@ -122,7 +77,7 @@
     dispatch_async(queue, ^{
         DDLogInfo(@"asyncSerial 任务3---%@", [NSThread currentThread]);
     });
-    DDLogInfo(@"---asyncSerial end---");
+    DDLogInfo(@"---asyncSerial end---%@", [NSThread currentThread]);
     
 //    [I] [22:26:09:164] : ---asyncSerial start---
 //    [I] [22:26:09:165] : ---asyncSerial end---
@@ -142,7 +97,7 @@
     //创建一个并行队列
     dispatch_queue_t queue = dispatch_queue_create("syncConcurrent", DISPATCH_QUEUE_CONCURRENT);
     
-    DDLogInfo(@"---syncConcurrent start---");
+    DDLogInfo(@"---syncConcurrent start---%@", [NSThread currentThread]);
     //使用同步函数封装三个任务
     dispatch_sync(queue, ^{
         DDLogInfo(@"syncConcurrent 任务1---%@", [NSThread currentThread]);
@@ -153,7 +108,7 @@
     dispatch_sync(queue, ^{
         DDLogInfo(@"syncConcurrent 任务3---%@", [NSThread currentThread]);
     });
-    DDLogInfo(@"---syncConcurrent end---");
+    DDLogInfo(@"---syncConcurrent end---%@", [NSThread currentThread]);
     
 //    [I] [22:32:33:987] : ---syncConcurrent start---
 //    [I] [22:32:33:988] : syncConcurrent 任务1---<NSThread: 0x604000070880>{number = 1, name = main}
@@ -173,22 +128,31 @@
     
     dispatch_queue_t queue = dispatch_queue_create("syncSerial", DISPATCH_QUEUE_SERIAL);
     
-    DDLogInfo(@"---syncSerial start---");
+    DDLogInfo(@"---syncSerial start---%@",[NSThread currentThread]);
     
     //使用异步函数封装三个任务
     dispatch_sync(queue, ^{
         DDLogInfo(@"syncSerial 任务1---%@", [NSThread currentThread]);
     });
-    dispatch_sync(queue, ^{
+    dispatch_async(queue, ^{
         DDLogInfo(@"syncSerial 任务2---%@", [NSThread currentThread]);
     });
+    dispatch_async(queue, ^{
+        DDLogInfo(@"syncSerial 任务2---%@", [NSThread currentThread]);
+    });
+    dispatch_async(queue, ^{
+        DDLogInfo(@"syncSerial 任务2---%@", [NSThread currentThread]);
+    });
+    dispatch_async(queue, ^{
+        DDLogInfo(@"syncSerial 任务2---%@", [NSThread currentThread]);
+    });
+    
     dispatch_sync(queue, ^{
         DDLogInfo(@"syncSerial 任务3---%@", [NSThread currentThread]);
     });
-    DDLogInfo(@"---syncSerial end---");
+    DDLogInfo(@"---syncSerial end---%@",[NSThread currentThread]);
 }
 
-//异步执行+主线程
 - (void)asyncMain
 {
     dispatch_queue_t queue = dispatch_get_main_queue();
@@ -209,28 +173,7 @@
 
 }
 
-- (void)apply
-{
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    
-    dispatch_apply(10, queue, ^(size_t index) {
-        DDLogInfo(@"apply %zi",index);
-    });
-    DDLogInfo(@"apply done");
-    
-//    [I] [23:56:11:521] : apply 4
-//    [I] [23:56:11:521] : apply 7
-//    [I] [23:56:11:521] : apply 0
-//    [I] [23:56:11:521] : apply 1
-//    [I] [23:56:11:521] : apply 5
-//    [I] [23:56:11:521] : apply 3
-//    [I] [23:56:11:521] : apply 6
-//    [I] [23:56:11:521] : apply 2
-//    [I] [23:56:11:522] : apply 8
-//    [I] [23:56:11:522] : apply 9
-//    [I] [23:56:11:522] : apply done
+#pragma mark - Layout Methods
 
-}
-
-
+#pragma mark - GET/SET Methods
 @end
