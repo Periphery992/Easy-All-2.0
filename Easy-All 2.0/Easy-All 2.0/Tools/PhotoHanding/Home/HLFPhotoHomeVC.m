@@ -20,12 +20,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self pushToViewControllerWithClass:[HLFPhotoEditVC class] animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [self pushToViewControllerWithClass:[HLFPhotoEditVC class] animated:YES];
 }
 
 #pragma mark - Delegate Methods

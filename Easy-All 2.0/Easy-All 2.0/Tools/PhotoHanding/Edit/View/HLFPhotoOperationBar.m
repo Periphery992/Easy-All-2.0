@@ -22,7 +22,9 @@
 @property (nonatomic, strong) UIButton *btnAddMore;
 @property (nonatomic, strong) UIButton *btnReduce;
 @property (nonatomic, strong) UIButton *btnReduceMore;
-
+@property (nonatomic, strong) UIButton *btnAuto;
+@property (nonatomic, strong) UIButton *btnSave;
+@property (nonatomic, strong) UIButton *btnBack;
 @end
 
 @implementation HLFPhotoOperationBar
@@ -34,6 +36,8 @@
     {
         self.backgroundColor = [UIColor whiteColor];
         
+        [self addSubview:self.btnSave];
+        [self addSubview:self.btnBack];
         [self addSubview:self.btnAddImage];
         [self addSubview:self.btnLocation];
         [self addSubview:self.btnScale];
@@ -48,7 +52,9 @@
         [self addSubview:self.btnAddMore];
         [self addSubview:self.btnReduce];
         [self addSubview:self.btnReduceMore];
+        [self addSubview:self.btnAuto];
         
+
         [self setDefaultConstraints];
         
     }
@@ -63,6 +69,21 @@
 - (void)touchBtnImage
 {
     [self.delegate photoOperationBarWithOperation:HLFPhotoOperationBarOperationAddImage number:0];
+}
+
+- (void)touchBtnAuto
+{
+    [self.delegate photoOperationBarWithOperation:HLFPhotoOperationBarOperationAuto number:0];
+}
+
+- (void)touchBtnBack
+{
+    [self.delegate photoOperationBarWithOperation:HLFPhotoOperationBarOperationBack number:0];
+}
+
+- (void)touchBtnSave
+{
+    [self.delegate photoOperationBarWithOperation:HLFPhotoOperationBarOperationSave number:0];
 }
 
 - (void)touchBtnLocation
@@ -146,8 +167,15 @@
 
 - (void)setDefaultConstraints
 {
-    [self.btnAddImage mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.btnBack mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.mas_equalTo(self);
+        make.height.mas_offset(30);
+        make.width.mas_offset(50);
+    }];
+    
+    [self.btnAddImage mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.btnBack.mas_right);
+        make.top.mas_equalTo(self);
         make.height.mas_offset(30);
         make.width.mas_offset(50);
     }];
@@ -161,6 +189,20 @@
     
     [self.btnScale mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.btnLocation.mas_right);
+        make.top.mas_equalTo(self);
+        make.height.mas_offset(30);
+        make.width.mas_offset(50);
+    }];
+    
+    [self.btnAuto mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.btnScale.mas_right);
+        make.top.mas_equalTo(self);
+        make.height.mas_offset(30);
+        make.width.mas_offset(50);
+    }];
+    
+    [self.btnSave mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.btnAuto.mas_right);
         make.top.mas_equalTo(self);
         make.height.mas_offset(30);
         make.width.mas_offset(50);
@@ -215,6 +257,23 @@
 
 
 #pragma mark - GET/SET Methods
+- (UIButton *)btnBack
+{
+    if (!_btnBack)
+    {
+        _btnBack = ({
+            
+            UIButton *button = [[UIButton alloc]init];
+            [button setNormalTitle:@"返回"];
+            [button setNormalTitleColor:HLFColor_Black];
+            [button addTouchUpInsideTarget:self action:@selector(touchBtnBack)];
+            
+            button;
+        });
+    }
+    return _btnBack;
+}
+
 - (UIButton *)btnAddImage
 {
     if (!_btnAddImage)
@@ -265,6 +324,38 @@
         });
     }
     return _btnScale;
+}
+
+- (UIButton *)btnAuto
+{
+    if (!_btnAuto)
+    {
+        _btnAuto = ({
+            
+            UIButton *button = [[UIButton alloc]init];
+            [button setNormalTitle:@"自动"];
+            [button setNormalTitleColor:HLFColor_Black];
+            [button addTouchUpInsideTarget:self action:@selector(touchBtnAuto)];
+            button;
+        });
+    }
+    return _btnAuto;
+}
+
+- (UIButton *)btnSave
+{
+    if (!_btnSave)
+    {
+        _btnSave = ({
+            
+            UIButton *button = [[UIButton alloc]init];
+            [button setNormalTitle:@"保存"];
+            [button setNormalTitleColor:HLFColor_Black];
+            [button addTouchUpInsideTarget:self action:@selector(touchBtnSave)];
+            button;
+        });
+    }
+    return _btnSave;
 }
 
 - (UILabel *)lblNumber
@@ -415,5 +506,7 @@
     }
     return _btnReduceMore;
 }
+
+
 
 @end

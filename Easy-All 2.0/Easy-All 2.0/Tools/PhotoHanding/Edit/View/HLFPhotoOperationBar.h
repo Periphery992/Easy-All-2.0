@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 typedef enum : NSUInteger {
+    HLFPhotoOperationBarOperationBack,
+    HLFPhotoOperationBarOperationAuto,
     HLFPhotoOperationBarOperationAddImage,
     HLFPhotoOperationBarOperationSave,
     HLFPhotoOperationBarOperationLocation,

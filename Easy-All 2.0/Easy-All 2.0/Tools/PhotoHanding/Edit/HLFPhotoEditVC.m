@@ -14,6 +14,9 @@
 @property (nonatomic, strong) UIImageView *originalImageView;
 @property (nonatomic, strong) UIImageView *addingImgView;
 @property (nonatomic, strong) HLFPhotoOperationBar *operationBar;
+@property (nonatomic, assign) BOOL isAuto;
+@property (nonatomic, strong) UIImage *imgOriginal;
+@property (nonatomic, strong) UIImage *imgReplace;
 
 @end
 
@@ -24,7 +27,9 @@
     // Do any additional setup after loading the view.
     self.navigationController.navigationBarHidden = YES;
     self.view.backgroundColor = [UIColor blackColor];
-
+    
+    self.imgOriginal = [UIImage imageNamed:@"logo_origin"];
+    self.imgReplace = [UIImage imageNamed:@"logo_replace"];
 
     [self openPhotoLibrary];
 }
@@ -55,7 +60,6 @@
             {
                 self.originalImageView.image = originalImage;
                 [self initView];
-                
             }
             else
             {
@@ -74,27 +78,30 @@
     }];
 }
 
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    if (!error)
+    {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
+}
+
 - (void)photoOperationBarWithOperation:(HLFPhotoOperationBarOperation)operation number:(CGFloat)number
 {
-    if (!_addingImgView.superview&&operation != HLFPhotoOperationBarOperationAddImage)
-    {
-        return;
-    }
-    
+
     if (operation == HLFPhotoOperationBarOperationAddImage)
     {
         [self openPhotoLibrary];
     }
+    else if (operation == HLFPhotoOperationBarOperationBack)
+    {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
     else if (operation == HLFPhotoOperationBarOperationSave)
     {
-        [self.addingImgView removeFromSuperview];
-        UIImage *image = [self newaddImage:self.addingImgView.image toImage:self.originalImageView.image];
-        image = [UIImage imageWithCGImage:image.CGImage scale:self.originalImageView.image.scale orientation:UIImageOrientationUp];
-        self.originalImageView.image = image;
-        
-//        UIImageWriteToSavedPhotosAlbum(image, <#id  _Nullable completionTarget#>, <#SEL  _Nullable completionSelector#>, <#void * _Nullable contextInfo#>)
+        UIImageWriteToSavedPhotosAlbum(self.originalImageView.image, self, nil, (__bridge void * _Nullable)(self));
     }
-    else if (operation == HLFPhotoOperationBarOperationNarrow)
+    else if (operation == HLFPhotoOperationBarOperationNarrow&&self.addingImgView.superview)
     {
         CGSize size = self.addingImgView.image.size;
         
@@ -105,7 +112,7 @@
         
         self.addingImgView.frame = CGRectMake(self.addingImgView.frame.origin.x + reduceWith/2.0, self.addingImgView.frame.origin.y + reduceHeight/2.0, CGRectGetWidth(self.addingImgView.frame)-reduceWith, CGRectGetHeight(self.addingImgView.frame)-reduceHeight) ;
     }
-    else if (operation == HLFPhotoOperationBarOperationEnlarge)
+    else if (operation == HLFPhotoOperationBarOperationEnlarge&&self.addingImgView.superview)
     {
         CGSize size = self.addingImgView.image.size;
         
@@ -116,38 +123,197 @@
         
         self.addingImgView.frame = CGRectMake(self.addingImgView.frame.origin.x - reduceWith/2.0, self.addingImgView.frame.origin.y - reduceHeight/2.0, CGRectGetWidth(self.addingImgView.frame)+reduceWith, CGRectGetHeight(self.addingImgView.frame)+reduceHeight) ;
     }
-    else if (operation == HLFPhotoOperationBarOperationLeft)
+    else if (operation == HLFPhotoOperationBarOperationLeft&&self.addingImgView.superview)
     {
         self.addingImgView.center = CGPointMake(CGRectGetMidX(self.addingImgView.frame)-number, CGRectGetMidY(self.addingImgView.frame));
     }
-    else if (operation == HLFPhotoOperationBarOperationRight)
+    else if (operation == HLFPhotoOperationBarOperationRight&&self.addingImgView.superview)
     {
         self.addingImgView.center = CGPointMake(CGRectGetMidX(self.addingImgView.frame)+number, CGRectGetMidY(self.addingImgView.frame));
     }
-    else if (operation == HLFPhotoOperationBarOperationUp)
+    else if (operation == HLFPhotoOperationBarOperationUp&&self.addingImgView.superview)
     {
         self.addingImgView.center = CGPointMake(CGRectGetMidX(self.addingImgView.frame), CGRectGetMidY(self.addingImgView.frame)-number);
     }
-    else if (operation == HLFPhotoOperationBarOperationDown)
+    else if (operation == HLFPhotoOperationBarOperationDown&&self.addingImgView.superview)
     {
         self.addingImgView.center = CGPointMake(CGRectGetMidX(self.addingImgView.frame), CGRectGetMidY(self.addingImgView.frame)+number);
+    }
+    else if (operation == HLFPhotoOperationBarOperationAuto)
+    {
+         [self findImage:self.imgOriginal inImage:self.originalImageView.image];
     }
     
 }
 
-- (UIImage *)addImage:(UIImage *)image1 toImage:(UIImage *)image2
+#pragma mark - Public Methods
+
+#pragma mark - Private Methods
+- (void)openPhotoLibrary
 {
-    UIGraphicsBeginImageContext(self.originalImageView.frame.size);
-    //Draw image1
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary])
+    {
+        return;
+    }
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary; // 设置控制器类型
+    picker.delegate = self; // 设置代理
+    picker.allowsEditing = NO;
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
+- (BOOL)findImage:(UIImage *)findingImage inImage:(UIImage *)image
+{
+    NSMutableArray *image2PointArray = [self getRGBPointArrayInImage:image];
     
-    //Draw image2
-    [image2 drawInRect:CGRectMake(0, 0, self.originalImageView.frame.size.width, self.originalImageView.frame.size.height)];
+    int width = findingImage.size.width;
     
-    [image1 drawInRect:CGRectMake(self.addingImgView.frame.origin.x - self.originalImageView.frame.origin.x, self.addingImgView.frame.origin.y - self.originalImageView.frame.origin.y, self.addingImgView.frame.size.width, self.addingImgView.frame.size.height)];
+    NSMutableArray *image1PointArray = [self getRGBPointArrayInImage:findingImage];
+    
+    NSArray *firstPoint = [[image1PointArray objectAtIndex:1] objectAtIndex:1];
+    
+    for (int i = 0; i < image2PointArray.count-width; i++)
+    {
+        NSMutableArray *array = [image2PointArray objectAtIndex:i];
+        
+        for (int j = 0; j < array.count -width; j++)
+        {
+            NSArray *point = [array objectAtIndex:j];
+            
+            if ([self isEqualPoint1:point withPoint2:firstPoint])
+            {
+                
+                if ([self checkAreaWithY:i x:j max:width findingImageRGBPointArray:image1PointArray imageRGBPointArray:image2PointArray])
+                {
+                    self.isAuto = YES;
+                    self.originalImageView.image = [self addImage:self.imgReplace toImage:self.originalImageView.image startPoint:CGPointMake(j, i)];
+                }
+            }
+        }
+    }
+    
+    if (!self.isAuto)
+    {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:NSLocalizedString(@"没有找到可以替换的", nil) preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:NSLocalizedString(@"好的", nil) style:UIAlertActionStyleCancel handler:nil];
+        [alertController addAction:actionCancel];
+        
+        [self.navigationController presentViewController:alertController animated:YES completion:nil];
+    }
+    else
+    {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:NSLocalizedString(@"搞定啦，保存不?", nil) preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:NSLocalizedString(@"存你个大头鬼!", nil) style:UIAlertActionStyleCancel handler:nil];
+        [alertController addAction:actionCancel];
+        
+        UIAlertAction *actionRetry = [UIAlertAction actionWithTitle:NSLocalizedString(@"存存存", nil) style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+            UIImageWriteToSavedPhotosAlbum(self.originalImageView.image, self, nil, (__bridge void * _Nullable)(self));
+        }];
+        [alertController addAction:actionRetry];
+        
+        [self.navigationController presentViewController:alertController animated:YES completion:nil];
+    }
+    
+    return YES;
+}
+
+- (NSMutableArray *)getRGBPointArrayInImage:(UIImage *)image
+{
+    NSMutableArray *image1PointArray = [[NSMutableArray alloc]init];
+    
+    image1PointArray = ({
+        
+        NSUInteger width = image.size.width;
+        NSUInteger height2 = image.size.height;
+        CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+        NSInteger bytesPerPixel = 4;
+        NSInteger bytesPerRow = bytesPerPixel * width;
+        NSUInteger bitsPerComponent = 8;
+        uint32_t* rgbImageBuf = (uint32_t*)malloc(bytesPerRow * height2);
+        CGContextRef context = CGBitmapContextCreate(rgbImageBuf,
+                                                     width,
+                                                     height2,
+                                                     bitsPerComponent,
+                                                     bytesPerRow,
+                                                     colorSpace,
+                                                     kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
+        
+        CGColorSpaceRelease(colorSpace);
+        CGContextSetBlendMode(context, kCGBlendModeCopy);
+        
+        
+        CGContextDrawImage(context, CGRectMake(0, 0, width, height2), image.CGImage);
+        CGContextRelease(context);
+        
+        uint32_t* pCurPtr = rgbImageBuf;
+        
+        NSMutableArray *array = [[NSMutableArray alloc]init];
+        
+        for (NSInteger m = 0; m < height2; m++)
+        {
+            NSMutableArray *mutRowPointArray = [[NSMutableArray alloc]init];
+            
+            for (NSInteger iRow = 0; iRow < width; iRow ++)
+            {
+                uint8_t* ptr = (uint8_t*)pCurPtr;
+                [mutRowPointArray addObject:@[[NSNumber numberWithInteger:ptr[0]],[NSNumber numberWithInteger:ptr[1]],[NSNumber numberWithInteger:ptr[2]]]];
+                pCurPtr = pCurPtr + 1;
+            }
+            
+            [array addObject:mutRowPointArray];
+        }
+        
+        array;
+    });
+    
+    return image1PointArray;
+}
+
+- (BOOL)isEqualPoint1:(NSArray *)point1 withPoint2:(NSArray *)point2
+{
+    int p1R = [point1[0] intValue];
+    int p1G = [point1[1] intValue];
+    int p1B = [point1[2] intValue];
+    
+    int p2R = [point2[0] intValue];
+    int p2G = [point2[1] intValue];
+    int p2B = [point2[2] intValue];
+    
+    if (abs(p1R - p2R)<55&&abs(p1G - p2G)<65&&abs(p1B - p2B)<70)
+    {
+        return YES;
+    }
+    return NO;
+}
+
+- (BOOL)checkAreaWithY:(NSInteger)y x:(NSInteger)x max:(NSInteger)max findingImageRGBPointArray:(NSMutableArray *)array1 imageRGBPointArray:(NSMutableArray *)array2
+{
+    for (NSInteger i = 0; i < max; i ++)
+    {
+        for (NSInteger m = 0; m < max; m ++)
+        {
+            NSArray *point1 = array1[i][m];
+            NSArray *point2 = array2[i+y][m+x];
+            
+            if (![self isEqualPoint1:point1 withPoint2:point2])
+            {
+                return NO;
+            }
+        }
+    }
+    return YES;
+}
+
+- (UIImage *)addImage:(UIImage *)image1 toImage:(UIImage *)image2 startPoint:(CGPoint)point
+{
+    UIGraphicsBeginImageContext(image2.size);
+    [image2 drawInRect:CGRectMake(0, 0, image2.size.width, image2.size.height)];
+    [image1 drawInRect:CGRectMake(point.x, point.y, 120, 120)];
     UIImage *resultingImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return resultingImage;
-    
 }
 
 - (UIImage *)newaddImage:(UIImage *)image1 toImage:(UIImage *)image2
@@ -177,27 +343,13 @@
     return newImage;
 }
 
-
-#pragma mark - Public Methods
-
-#pragma mark - Private Methods
-- (void)openPhotoLibrary
-{
-    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary])
-    {
-        return;
-    }
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary; // 设置控制器类型
-    picker.delegate = self; // 设置代理
-    picker.allowsEditing = NO;
-    [self presentViewController:picker animated:YES completion:nil];
-}
+#pragma mark - Reload Methods
 
 - (BOOL)prefersStatusBarHidden
 {
     return YES;
 }
+
 #pragma mark - Layout Methods
 
 - (void)setDefaultConstraints
