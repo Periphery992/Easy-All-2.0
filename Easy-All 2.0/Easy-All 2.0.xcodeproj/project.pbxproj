@@ -47,6 +47,8 @@
 		506A21B620EC62A20090C03C /* TimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 506A21B520EC62A20090C03C /* TimeViewController.m */; };
 		506EBD1A212E5398002AD81D /* HLFRGBPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 506EBD19212E5398002AD81D /* HLFRGBPoint.m */; };
 		506EBD1D212E53DA002AD81D /* HLFCheckImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 506EBD1C212E53DA002AD81D /* HLFCheckImage.m */; };
+		506EBD24212EC062002AD81D /* HLFTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 506EBD23212EC062002AD81D /* HLFTest.m */; };
+		506EBD28212EC49F002AD81D /* HLFWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 506EBD27212EC49F002AD81D /* HLFWebVC.m */; };
 		509CD30820C8CE1100D29595 /* iPadMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 509CD30720C8CE1100D29595 /* iPadMainViewController.m */; };
 		551BB02520BDBB520004E55B /* MainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 551BB02420BDBB520004E55B /* MainManager.m */; };
 		9057B2D420CA5C103DC0D081 /* libPods-Easy-All 2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F940BCCFA6EEE85C79177D88 /* libPods-Easy-All 2.0.a */; };
@@ -135,6 +137,10 @@
 		506EBD19212E5398002AD81D /* HLFRGBPoint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLFRGBPoint.m; sourceTree = "<group>"; };
 		506EBD1B212E53DA002AD81D /* HLFCheckImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLFCheckImage.h; sourceTree = "<group>"; };
 		506EBD1C212E53DA002AD81D /* HLFCheckImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLFCheckImage.m; sourceTree = "<group>"; };
+		506EBD22212EC062002AD81D /* HLFTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLFTest.h; sourceTree = "<group>"; };
+		506EBD23212EC062002AD81D /* HLFTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLFTest.m; sourceTree = "<group>"; };
+		506EBD26212EC49F002AD81D /* HLFWebVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLFWebVC.h; sourceTree = "<group>"; };
+		506EBD27212EC49F002AD81D /* HLFWebVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLFWebVC.m; sourceTree = "<group>"; };
 		509CD30620C8CE1100D29595 /* iPadMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iPadMainViewController.h; sourceTree = "<group>"; };
 		509CD30720C8CE1100D29595 /* iPadMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPadMainViewController.m; sourceTree = "<group>"; };
 		551BB02320BDBB520004E55B /* MainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainManager.h; sourceTree = "<group>"; };
@@ -297,6 +303,7 @@
 		504B507C2123FB5800514388 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				506EBD21212EC03D002AD81D /* HLFTest */,
 				506EBD17212E537E002AD81D /* HLFCheckImage */,
 				5011417A212AD8DB00504435 /* UIButton */,
 				502A1DBD212A66F2009A9069 /* UIView */,
@@ -346,6 +353,7 @@
 		505EF66D20C62EFA000700AE /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				506EBD25212EC487002AD81D /* Web */,
 				504B50782122BFFA00514388 /* NSThread */,
 				506A21B320EC625E0090C03C /* Time */,
 				505EF6AC20C62F92000700AE /* KVC */,
@@ -504,6 +512,24 @@
 				506EBD1C212E53DA002AD81D /* HLFCheckImage.m */,
 			);
 			path = HLFCheckImage;
+			sourceTree = "<group>";
+		};
+		506EBD21212EC03D002AD81D /* HLFTest */ = {
+			isa = PBXGroup;
+			children = (
+				506EBD22212EC062002AD81D /* HLFTest.h */,
+				506EBD23212EC062002AD81D /* HLFTest.m */,
+			);
+			path = HLFTest;
+			sourceTree = "<group>";
+		};
+		506EBD25212EC487002AD81D /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				506EBD26212EC49F002AD81D /* HLFWebVC.h */,
+				506EBD27212EC49F002AD81D /* HLFWebVC.m */,
+			);
+			path = Web;
 			sourceTree = "<group>";
 		};
 		509CD30520C8CDFB00D29595 /* iPadMain */ = {
@@ -672,6 +698,7 @@
 				501EED3720B6E04D003FAD06 /* MainViewController.m in Sources */,
 				551BB02520BDBB520004E55B /* MainManager.m in Sources */,
 				502861A020BC350E006EABBA /* MainTypeBean.m in Sources */,
+				506EBD24212EC062002AD81D /* HLFTest.m in Sources */,
 				5028619E20BC350E006EABBA /* MainToolBean.m in Sources */,
 				505EF69420C62F4B000700AE /* AccountHomeViewController.m in Sources */,
 				50114179212AD1F300504435 /* HLFPhotoOperationBar.m in Sources */,
@@ -680,6 +707,7 @@
 				505EF69120C62F4B000700AE /* AccountEditViewController+CellDelegate.m in Sources */,
 				505EF6A720C62F6C000700AE /* CopyBean.m in Sources */,
 				504B508B212663AA00514388 /* HLFPhotoEditVC.m in Sources */,
+				506EBD28212EC49F002AD81D /* HLFWebVC.m in Sources */,
 				506EBD1A212E5398002AD81D /* HLFRGBPoint.m in Sources */,
 				503D05AA212ABEF600A5308B /* HLFPhotoStitchVC.m in Sources */,
 				50114174212ABFAB00504435 /* HLFImageProcessorView.m in Sources */,
