@@ -19,7 +19,6 @@
     // Do any additional setup after loading the view.
     
     
-    NSDate *date = [NSDate date];
     
 //    time_t t;
 //    struct tm tm;

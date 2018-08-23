@@ -31,4 +31,8 @@ typedef enum : NSUInteger {
 
 @interface HLFPhotoOperationBar : UIView
 @property (nonatomic, weak) id<HLFPhotoOperationBarDelegate> delegate;
+
+- (void)startAutoTip;
+
+- (void)finishAutoTip;
 @end

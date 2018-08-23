@@ -9,13 +9,14 @@
 #import "HLFPhotoEditVC.h"
 #import "HLFPhotoLineView.h"
 #import "HLFPhotoOperationBar.h"
+#import "HLFCheckImage.h"
 
 @interface HLFPhotoEditVC ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate,HLFPhotoOperationBarDelegate>
 @property (nonatomic, strong) UIImageView *originalImageView;
 @property (nonatomic, strong) UIImageView *addingImgView;
 @property (nonatomic, strong) HLFPhotoOperationBar *operationBar;
 @property (nonatomic, assign) BOOL isAuto;
-@property (nonatomic, strong) UIImage *imgOriginal;
+@property (nonatomic, strong) UIImage *imgRearch;
 @property (nonatomic, strong) UIImage *imgReplace;
 
 @end
@@ -28,7 +29,7 @@
     self.navigationController.navigationBarHidden = YES;
     self.view.backgroundColor = [UIColor blackColor];
     
-    self.imgOriginal = [UIImage imageNamed:@"logo_origin"];
+    self.imgRearch = [UIImage imageNamed:@"logo_origin"];
     self.imgReplace = [UIImage imageNamed:@"logo_replace"];
 
     [self openPhotoLibrary];
@@ -141,11 +142,28 @@
     }
     else if (operation == HLFPhotoOperationBarOperationAuto)
     {
-         [self findImage:self.imgOriginal inImage:self.originalImageView.image];
+        self.isAuto = YES;
     }
-    
 }
 
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if (self.isAuto)
+    {
+        NSSet *allTouches = [event allTouches];    //返回与当前接收者有关的所有的触摸对象
+        UITouch *touch = [allTouches anyObject];   //视图中的所有对象
+        CGPoint point = [touch locationInView:self.originalImageView]; //返回触摸点在视图中的当前坐标
+        
+        point.x = point.x < 0?0:point.x;
+        point.y = point.y < 0?0:point.y;
+
+        int x = point.x/CGRectGetWidth(self.originalImageView.frame)*self.originalImageView.image.size.width;
+        int y = point.y/CGRectGetHeight(self.originalImageView.frame)*self.originalImageView.image.size.height;
+            
+        [self startAutoReplaceImageWithStartPoint:CGPointMake(x, y)];
+    }
+}
 #pragma mark - Public Methods
 
 #pragma mark - Private Methods
@@ -162,37 +180,22 @@
     [self presentViewController:picker animated:YES completion:nil];
 }
 
-- (BOOL)findImage:(UIImage *)findingImage inImage:(UIImage *)image
+- (void)startAutoReplaceImageWithStartPoint:(CGPoint)point
 {
-    NSMutableArray *image2PointArray = [self getRGBPointArrayInImage:image];
+    self.isAuto = NO;
     
-    int width = findingImage.size.width;
+    DDLogVerbose(@"HLFPhotoEdit startReplace");
+    [self.operationBar startAutoTip];
     
-    NSMutableArray *image1PointArray = [self getRGBPointArrayInImage:findingImage];
+    HLFCheckImage *check = [[HLFCheckImage alloc]initWithOriginalImage:self.originalImageView.image rearchImage:self.imgRearch replaceImage:self.imgReplace];
+    [check setImageOffset:UIEdgeInsetsMake(0, 0, 0, 0)];
+    [check setRGBValueOffset:@[@55,@65,@70]];
+    [check setStartSearchPoint:point];
+    [check setMaxErrorPointRate:0.18];
     
-    NSArray *firstPoint = [[image1PointArray objectAtIndex:1] objectAtIndex:1];
+    UIImage *imgResult = [check startReplaceWithOptimization:HLFCheckImageOptimizationWeChatLogo];
     
-    for (int i = 0; i < image2PointArray.count-width; i++)
-    {
-        NSMutableArray *array = [image2PointArray objectAtIndex:i];
-        
-        for (int j = 0; j < array.count -width; j++)
-        {
-            NSArray *point = [array objectAtIndex:j];
-            
-            if ([self isEqualPoint1:point withPoint2:firstPoint])
-            {
-                
-                if ([self checkAreaWithY:i x:j max:width findingImageRGBPointArray:image1PointArray imageRGBPointArray:image2PointArray])
-                {
-                    self.isAuto = YES;
-                    self.originalImageView.image = [self addImage:self.imgReplace toImage:self.originalImageView.image startPoint:CGPointMake(j, i)];
-                }
-            }
-        }
-    }
-    
-    if (!self.isAuto)
+    if (!imgResult) //没有找到
     {
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:NSLocalizedString(@"没有找到可以替换的", nil) preferredStyle:UIAlertControllerStyleAlert];
         
@@ -200,9 +203,12 @@
         [alertController addAction:actionCancel];
         
         [self.navigationController presentViewController:alertController animated:YES completion:nil];
+        
     }
-    else
+    else //找到了
     {
+        self.originalImageView.image = imgResult;
+        
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:NSLocalizedString(@"搞定啦，保存不?", nil) preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:NSLocalizedString(@"存你个大头鬼!", nil) style:UIAlertActionStyleCancel handler:nil];
@@ -214,133 +220,10 @@
         [alertController addAction:actionRetry];
         
         [self.navigationController presentViewController:alertController animated:YES completion:nil];
+        
     }
-    
-    return YES;
-}
-
-- (NSMutableArray *)getRGBPointArrayInImage:(UIImage *)image
-{
-    NSMutableArray *image1PointArray = [[NSMutableArray alloc]init];
-    
-    image1PointArray = ({
-        
-        NSUInteger width = image.size.width;
-        NSUInteger height2 = image.size.height;
-        CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-        NSInteger bytesPerPixel = 4;
-        NSInteger bytesPerRow = bytesPerPixel * width;
-        NSUInteger bitsPerComponent = 8;
-        uint32_t* rgbImageBuf = (uint32_t*)malloc(bytesPerRow * height2);
-        CGContextRef context = CGBitmapContextCreate(rgbImageBuf,
-                                                     width,
-                                                     height2,
-                                                     bitsPerComponent,
-                                                     bytesPerRow,
-                                                     colorSpace,
-                                                     kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
-        
-        CGColorSpaceRelease(colorSpace);
-        CGContextSetBlendMode(context, kCGBlendModeCopy);
-        
-        
-        CGContextDrawImage(context, CGRectMake(0, 0, width, height2), image.CGImage);
-        CGContextRelease(context);
-        
-        uint32_t* pCurPtr = rgbImageBuf;
-        
-        NSMutableArray *array = [[NSMutableArray alloc]init];
-        
-        for (NSInteger m = 0; m < height2; m++)
-        {
-            NSMutableArray *mutRowPointArray = [[NSMutableArray alloc]init];
-            
-            for (NSInteger iRow = 0; iRow < width; iRow ++)
-            {
-                uint8_t* ptr = (uint8_t*)pCurPtr;
-                [mutRowPointArray addObject:@[[NSNumber numberWithInteger:ptr[0]],[NSNumber numberWithInteger:ptr[1]],[NSNumber numberWithInteger:ptr[2]]]];
-                pCurPtr = pCurPtr + 1;
-            }
-            
-            [array addObject:mutRowPointArray];
-        }
-        
-        array;
-    });
-    
-    return image1PointArray;
-}
-
-- (BOOL)isEqualPoint1:(NSArray *)point1 withPoint2:(NSArray *)point2
-{
-    int p1R = [point1[0] intValue];
-    int p1G = [point1[1] intValue];
-    int p1B = [point1[2] intValue];
-    
-    int p2R = [point2[0] intValue];
-    int p2G = [point2[1] intValue];
-    int p2B = [point2[2] intValue];
-    
-    if (abs(p1R - p2R)<55&&abs(p1G - p2G)<65&&abs(p1B - p2B)<70)
-    {
-        return YES;
-    }
-    return NO;
-}
-
-- (BOOL)checkAreaWithY:(NSInteger)y x:(NSInteger)x max:(NSInteger)max findingImageRGBPointArray:(NSMutableArray *)array1 imageRGBPointArray:(NSMutableArray *)array2
-{
-    for (NSInteger i = 0; i < max; i ++)
-    {
-        for (NSInteger m = 0; m < max; m ++)
-        {
-            NSArray *point1 = array1[i][m];
-            NSArray *point2 = array2[i+y][m+x];
-            
-            if (![self isEqualPoint1:point1 withPoint2:point2])
-            {
-                return NO;
-            }
-        }
-    }
-    return YES;
-}
-
-- (UIImage *)addImage:(UIImage *)image1 toImage:(UIImage *)image2 startPoint:(CGPoint)point
-{
-    UIGraphicsBeginImageContext(image2.size);
-    [image2 drawInRect:CGRectMake(0, 0, image2.size.width, image2.size.height)];
-    [image1 drawInRect:CGRectMake(point.x, point.y, 120, 120)];
-    UIImage *resultingImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return resultingImage;
-}
-
-- (UIImage *)newaddImage:(UIImage *)image1 toImage:(UIImage *)image2
-{
-    int w = self.originalImageView.frame.size.width;
-    int h = self.originalImageView.frame.size.height;
-    
-    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    CGContextRef context = CGBitmapContextCreate(NULL, w, h, 8, 4 * w, colorSpace, kCGImageAlphaPremultipliedFirst);
-    
-    CGContextBeginPath(context);
-    
-    CGContextClosePath(context);
-    CGContextClip(context);
-    
-    CGContextDrawImage(context, CGRectMake(0, 0, w, h), image2.CGImage);
-    CGContextDrawImage(context, CGRectMake(self.addingImgView.frame.origin.x - self.originalImageView.frame.origin.x, self.addingImgView.frame.origin.y - self.originalImageView.frame.origin.y, self.addingImgView.frame.size.width, self.addingImgView.frame.size.height), image1.CGImage);
-    
-    CGImageRef imageMasked = CGBitmapContextCreateImage(context);
-    CGContextRelease(context);
-    CGColorSpaceRelease(colorSpace);
-    
-    UIImage    *newImage = [UIImage imageWithCGImage:imageMasked];
-    
-    CGImageRelease(imageMasked);
-    
-    return newImage;
+    DDLogVerbose(@"HLFPhotoEdit finished");
+    [self.operationBar finishAutoTip];
 }
 
 #pragma mark - Reload Methods
@@ -406,7 +289,6 @@
     {
         _addingImgView = ({
             UIImageView *imageView = [[UIImageView alloc]init];
-            
             imageView;
         });
     }

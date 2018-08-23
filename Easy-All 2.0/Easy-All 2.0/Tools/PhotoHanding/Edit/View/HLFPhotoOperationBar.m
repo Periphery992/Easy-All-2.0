@@ -9,10 +9,16 @@
 #import "HLFPhotoOperationBar.h"
 
 @interface HLFPhotoOperationBar(){}
+@property (nonatomic, strong) UIButton *btnBack;
 @property (nonatomic, strong) UIButton *btnAddImage;
 @property (nonatomic, strong) UIButton *btnLocation;
 @property (nonatomic, strong) UIButton *btnScale;
+@property (nonatomic, strong) UIButton *btnAuto;
+@property (nonatomic, strong) UIButton *btnSave;
+
+@property (nonatomic, assign) CGFloat operationNum;
 @property (nonatomic, strong) UILabel *lblNumber;
+
 @property (nonatomic, strong) UIButton *btnTop;
 @property (nonatomic, strong) UIButton *btnLeft;
 @property (nonatomic, strong) UIButton *btnRight;
@@ -22,9 +28,8 @@
 @property (nonatomic, strong) UIButton *btnAddMore;
 @property (nonatomic, strong) UIButton *btnReduce;
 @property (nonatomic, strong) UIButton *btnReduceMore;
-@property (nonatomic, strong) UIButton *btnAuto;
-@property (nonatomic, strong) UIButton *btnSave;
-@property (nonatomic, strong) UIButton *btnBack;
+
+
 @end
 
 @implementation HLFPhotoOperationBar
@@ -35,12 +40,14 @@
     if (self = [super init])
     {
         self.backgroundColor = [UIColor whiteColor];
-        
-        [self addSubview:self.btnSave];
+    
         [self addSubview:self.btnBack];
         [self addSubview:self.btnAddImage];
         [self addSubview:self.btnLocation];
         [self addSubview:self.btnScale];
+        [self addSubview:self.btnAuto];
+        [self addSubview:self.btnSave];
+        
         [self addSubview:self.lblNumber];
         
         [self addSubview:self.btnTop];
@@ -52,7 +59,7 @@
         [self addSubview:self.btnAddMore];
         [self addSubview:self.btnReduce];
         [self addSubview:self.btnReduceMore];
-        [self addSubview:self.btnAuto];
+        
         
 
         [self setDefaultConstraints];
@@ -64,16 +71,41 @@
 #pragma mark - Delegate Methods
 
 #pragma mark - Public Methods
+- (void)startAutoTip
+{
+    self.lblNumber.text = NSLocalizedString(@"处理中，请稍后...", nil);
+}
+
+- (void)finishAutoTip
+{
+    self.lblNumber.text = NSLocalizedString(@"处理完成啦", nil);
+}
 
 #pragma mark - Private Methods
-- (void)touchBtnImage
+- (void)touchBtnAddImage
 {
     [self.delegate photoOperationBarWithOperation:HLFPhotoOperationBarOperationAddImage number:0];
 }
 
 - (void)touchBtnAuto
 {
+    self.btnLocation.selected = NO;
+    self.btnScale.selected = NO;
+    self.btnAuto.selected = YES;
+    
+    self.btnTop.hidden = YES;
+    self.btnLeft.hidden = YES;
+    self.btnRight.hidden = YES;
+    self.btnBottom.hidden = YES;
+    self.btnAdd.hidden = YES;
+    self.btnAddMore.hidden = YES;
+    self.btnReduce.hidden = YES;
+    self.btnReduceMore.hidden = YES;
+    
+    self.lblNumber.text = NSLocalizedString(@"请点击图片中需要替换的图片（如果有多张，点最上最左的那张）的左上角位置(不需要很精准，别点到图片内就OK)", nil);
+    
     [self.delegate photoOperationBarWithOperation:HLFPhotoOperationBarOperationAuto number:0];
+
 }
 
 - (void)touchBtnBack
@@ -90,7 +122,9 @@
 {
     if (!self.btnLocation.selected)
     {
+        self.lblNumber.text = [NSString stringWithFormat:@"%0.1f",self.operationNum];
         self.btnScale.selected = NO;
+        self.btnAuto.selected = NO;
         self.btnLocation.selected = YES;
         self.btnTop.selected = YES;
         self.btnLeft.selected = YES;
@@ -99,7 +133,6 @@
         
         self.btnTop.hidden = NO;
         self.btnBottom.hidden = NO;
-        
     }
 }
 
@@ -107,7 +140,9 @@
 {
     if (!self.btnScale.selected)
     {
+        self.lblNumber.text = [NSString stringWithFormat:@"%0.1f",self.operationNum];
         self.btnScale.selected = YES;
+        self.btnAuto.selected = NO;
         self.btnLocation.selected = NO;
         self.btnTop.selected = NO;
         self.btnLeft.selected = NO;
@@ -160,6 +195,7 @@
         return;
     }
     
+    self.operationNum = [self.lblNumber.text floatValue];
     [self.delegate photoOperationBarWithOperation:operation number:[self.lblNumber.text floatValue]];
 }
 
@@ -211,7 +247,8 @@
     [self.lblNumber mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self.mas_centerX);
         make.centerY.mas_equalTo(self.mas_centerY).mas_offset(15);
-        make.width.mas_offset(50);
+        make.width.mas_greaterThanOrEqualTo(50);
+        make.width.mas_lessThanOrEqualTo(self.mas_width).mas_offset(-40);
     }];
     
     [self.btnLeft mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -283,7 +320,7 @@
             UIButton *button = [[UIButton alloc]init];
             [button setNormalTitle:@"添加"];
             [button setNormalTitleColor:HLFColor_Black];
-            [button addTouchUpInsideTarget:self action:@selector(touchBtnImage)];
+            [button addTouchUpInsideTarget:self action:@selector(touchBtnAddImage)];
             
             button;
         });
@@ -335,6 +372,7 @@
             UIButton *button = [[UIButton alloc]init];
             [button setNormalTitle:@"自动"];
             [button setNormalTitleColor:HLFColor_Black];
+            [button setSelectedTitleColor:HLFColor_Red];
             [button addTouchUpInsideTarget:self action:@selector(touchBtnAuto)];
             button;
         });
@@ -367,6 +405,7 @@
             UILabel *label = [[UILabel alloc]init];
             label.text = @"1";
             label.textAlignment = NSTextAlignmentCenter;
+            label.numberOfLines = 0;
             label;
         });
     }

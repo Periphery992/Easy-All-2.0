@@ -45,6 +45,8 @@
 		505EF6AF20C62F9A000700AE /* KVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF6AE20C62F9A000700AE /* KVCViewController.m */; };
 		505EF6B220C63419000700AE /* KVCTestBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF6B120C63419000700AE /* KVCTestBean.m */; };
 		506A21B620EC62A20090C03C /* TimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 506A21B520EC62A20090C03C /* TimeViewController.m */; };
+		506EBD1A212E5398002AD81D /* HLFRGBPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 506EBD19212E5398002AD81D /* HLFRGBPoint.m */; };
+		506EBD1D212E53DA002AD81D /* HLFCheckImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 506EBD1C212E53DA002AD81D /* HLFCheckImage.m */; };
 		509CD30820C8CE1100D29595 /* iPadMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 509CD30720C8CE1100D29595 /* iPadMainViewController.m */; };
 		551BB02520BDBB520004E55B /* MainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 551BB02420BDBB520004E55B /* MainManager.m */; };
 		9057B2D420CA5C103DC0D081 /* libPods-Easy-All 2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F940BCCFA6EEE85C79177D88 /* libPods-Easy-All 2.0.a */; };
@@ -129,6 +131,10 @@
 		505EF6B120C63419000700AE /* KVCTestBean.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCTestBean.m; sourceTree = "<group>"; };
 		506A21B420EC62A20090C03C /* TimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeViewController.h; sourceTree = "<group>"; };
 		506A21B520EC62A20090C03C /* TimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeViewController.m; sourceTree = "<group>"; };
+		506EBD18212E5398002AD81D /* HLFRGBPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLFRGBPoint.h; sourceTree = "<group>"; };
+		506EBD19212E5398002AD81D /* HLFRGBPoint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLFRGBPoint.m; sourceTree = "<group>"; };
+		506EBD1B212E53DA002AD81D /* HLFCheckImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLFCheckImage.h; sourceTree = "<group>"; };
+		506EBD1C212E53DA002AD81D /* HLFCheckImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLFCheckImage.m; sourceTree = "<group>"; };
 		509CD30620C8CE1100D29595 /* iPadMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iPadMainViewController.h; sourceTree = "<group>"; };
 		509CD30720C8CE1100D29595 /* iPadMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPadMainViewController.m; sourceTree = "<group>"; };
 		551BB02320BDBB520004E55B /* MainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainManager.h; sourceTree = "<group>"; };
@@ -291,6 +297,7 @@
 		504B507C2123FB5800514388 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				506EBD17212E537E002AD81D /* HLFCheckImage */,
 				5011417A212AD8DB00504435 /* UIButton */,
 				502A1DBD212A66F2009A9069 /* UIView */,
 				504B507D2123FB7500514388 /* UIViewController */,
@@ -488,6 +495,17 @@
 			path = Time;
 			sourceTree = "<group>";
 		};
+		506EBD17212E537E002AD81D /* HLFCheckImage */ = {
+			isa = PBXGroup;
+			children = (
+				506EBD18212E5398002AD81D /* HLFRGBPoint.h */,
+				506EBD19212E5398002AD81D /* HLFRGBPoint.m */,
+				506EBD1B212E53DA002AD81D /* HLFCheckImage.h */,
+				506EBD1C212E53DA002AD81D /* HLFCheckImage.m */,
+			);
+			path = HLFCheckImage;
+			sourceTree = "<group>";
+		};
 		509CD30520C8CDFB00D29595 /* iPadMain */ = {
 			isa = PBXGroup;
 			children = (
@@ -662,9 +680,11 @@
 				505EF69120C62F4B000700AE /* AccountEditViewController+CellDelegate.m in Sources */,
 				505EF6A720C62F6C000700AE /* CopyBean.m in Sources */,
 				504B508B212663AA00514388 /* HLFPhotoEditVC.m in Sources */,
+				506EBD1A212E5398002AD81D /* HLFRGBPoint.m in Sources */,
 				503D05AA212ABEF600A5308B /* HLFPhotoStitchVC.m in Sources */,
 				50114174212ABFAB00504435 /* HLFImageProcessorView.m in Sources */,
 				50114173212ABFAB00504435 /* HLFImageCVCell.m in Sources */,
+				506EBD1D212E53DA002AD81D /* HLFCheckImage.m in Sources */,
 				504B50882126639300514388 /* HLFPhotoHomeVC.m in Sources */,
 				50448CF020B6DD0700E4FFD0 /* AppDelegate.m in Sources */,
 			);
