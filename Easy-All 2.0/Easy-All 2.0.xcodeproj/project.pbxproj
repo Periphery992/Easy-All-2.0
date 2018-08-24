@@ -49,6 +49,7 @@
 		506EBD1D212E53DA002AD81D /* HLFCheckImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 506EBD1C212E53DA002AD81D /* HLFCheckImage.m */; };
 		506EBD24212EC062002AD81D /* HLFTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 506EBD23212EC062002AD81D /* HLFTest.m */; };
 		506EBD28212EC49F002AD81D /* HLFWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 506EBD27212EC49F002AD81D /* HLFWebVC.m */; };
+		506EBD2F212FF0D0002AD81D /* HLFRunLoopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 506EBD2E212FF0D0002AD81D /* HLFRunLoopVC.m */; };
 		509CD30820C8CE1100D29595 /* iPadMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 509CD30720C8CE1100D29595 /* iPadMainViewController.m */; };
 		551BB02520BDBB520004E55B /* MainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 551BB02420BDBB520004E55B /* MainManager.m */; };
 		9057B2D420CA5C103DC0D081 /* libPods-Easy-All 2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F940BCCFA6EEE85C79177D88 /* libPods-Easy-All 2.0.a */; };
@@ -141,6 +142,8 @@
 		506EBD23212EC062002AD81D /* HLFTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLFTest.m; sourceTree = "<group>"; };
 		506EBD26212EC49F002AD81D /* HLFWebVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLFWebVC.h; sourceTree = "<group>"; };
 		506EBD27212EC49F002AD81D /* HLFWebVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLFWebVC.m; sourceTree = "<group>"; };
+		506EBD2D212FF0D0002AD81D /* HLFRunLoopVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLFRunLoopVC.h; sourceTree = "<group>"; };
+		506EBD2E212FF0D0002AD81D /* HLFRunLoopVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLFRunLoopVC.m; sourceTree = "<group>"; };
 		509CD30620C8CE1100D29595 /* iPadMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iPadMainViewController.h; sourceTree = "<group>"; };
 		509CD30720C8CE1100D29595 /* iPadMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPadMainViewController.m; sourceTree = "<group>"; };
 		551BB02320BDBB520004E55B /* MainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainManager.h; sourceTree = "<group>"; };
@@ -353,6 +356,7 @@
 		505EF66D20C62EFA000700AE /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				506EBD2C212FF0BD002AD81D /* RunLoop */,
 				506EBD25212EC487002AD81D /* Web */,
 				504B50782122BFFA00514388 /* NSThread */,
 				506A21B320EC625E0090C03C /* Time */,
@@ -532,6 +536,15 @@
 			path = Web;
 			sourceTree = "<group>";
 		};
+		506EBD2C212FF0BD002AD81D /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				506EBD2D212FF0D0002AD81D /* HLFRunLoopVC.h */,
+				506EBD2E212FF0D0002AD81D /* HLFRunLoopVC.m */,
+			);
+			path = RunLoop;
+			sourceTree = "<group>";
+		};
 		509CD30520C8CDFB00D29595 /* iPadMain */ = {
 			isa = PBXGroup;
 			children = (
@@ -708,6 +721,7 @@
 				505EF6A720C62F6C000700AE /* CopyBean.m in Sources */,
 				504B508B212663AA00514388 /* HLFPhotoEditVC.m in Sources */,
 				506EBD28212EC49F002AD81D /* HLFWebVC.m in Sources */,
+				506EBD2F212FF0D0002AD81D /* HLFRunLoopVC.m in Sources */,
 				506EBD1A212E5398002AD81D /* HLFRGBPoint.m in Sources */,
 				503D05AA212ABEF600A5308B /* HLFPhotoStitchVC.m in Sources */,
 				50114174212ABFAB00504435 /* HLFImageProcessorView.m in Sources */,

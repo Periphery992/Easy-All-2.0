@@ -49,6 +49,12 @@
 				<key>viewController</key>
 				<string>HLFWebVC</string>
 			</dict>
+			<dict>
+				<key>name</key>
+				<string>RunLoop</string>
+				<key>viewController</key>
+				<string>HLFRunLoopVC</string>
+			</dict>
 		</array>
 	</dict>
 	<dict>
