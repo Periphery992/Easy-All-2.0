@@ -12,6 +12,8 @@
 		50114175212ABFAB00504435 /* HLFPhotoLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50114172212ABFAB00504435 /* HLFPhotoLineView.m */; };
 		50114179212AD1F300504435 /* HLFPhotoOperationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 50114178212AD1F300504435 /* HLFPhotoOperationBar.m */; };
 		5011417D212AD97B00504435 /* UIButton+EasySet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5011417C212AD97B00504435 /* UIButton+EasySet.m */; };
+		501A3E932130556900DF7E51 /* GWRoleDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 501A3E922130556900DF7E51 /* GWRoleDataManager.m */; };
+		501A3E962130576700DF7E51 /* GWRoleDataInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 501A3E952130576700DF7E51 /* GWRoleDataInfo.m */; };
 		501EED3720B6E04D003FAD06 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 501EED3620B6E04D003FAD06 /* MainViewController.m */; };
 		5028619E20BC350E006EABBA /* MainToolBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 5028619920BC350E006EABBA /* MainToolBean.m */; };
 		5028619F20BC350E006EABBA /* MainList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5028619A20BC350E006EABBA /* MainList.plist */; };
@@ -50,6 +52,11 @@
 		506EBD24212EC062002AD81D /* HLFTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 506EBD23212EC062002AD81D /* HLFTest.m */; };
 		506EBD28212EC49F002AD81D /* HLFWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 506EBD27212EC49F002AD81D /* HLFWebVC.m */; };
 		509CD30820C8CE1100D29595 /* iPadMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 509CD30720C8CE1100D29595 /* iPadMainViewController.m */; };
+		50C563E921305B1600098FB2 /* RoleData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50C563E821305B1600098FB2 /* RoleData.plist */; };
+		50C563ED2130647C00098FB2 /* GWLoadingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C563EC2130647C00098FB2 /* GWLoadingVC.m */; };
+		50C563F12131B94E00098FB2 /* EquipmentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C563F02131B94E00098FB2 /* EquipmentManager.m */; };
+		50C563F42131B96500098FB2 /* EquipmentManager+List.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C563F32131B96500098FB2 /* EquipmentManager+List.m */; };
+		50C563F62131B9C500098FB2 /* PlateHelmet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50C563F52131B9C500098FB2 /* PlateHelmet.plist */; };
 		551BB02520BDBB520004E55B /* MainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 551BB02420BDBB520004E55B /* MainManager.m */; };
 		9057B2D420CA5C103DC0D081 /* libPods-Easy-All 2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F940BCCFA6EEE85C79177D88 /* libPods-Easy-All 2.0.a */; };
 /* End PBXBuildFile section */
@@ -67,6 +74,10 @@
 		5011417C212AD97B00504435 /* UIButton+EasySet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EasySet.m"; sourceTree = "<group>"; };
 		5018FBCD20DD45AC0083148E /* UIColorDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColorDefine.h; sourceTree = "<group>"; };
 		5018FBCE20DD45AC0083148E /* UIDeviceDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDeviceDefine.h; sourceTree = "<group>"; };
+		501A3E912130556900DF7E51 /* GWRoleDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GWRoleDataManager.h; sourceTree = "<group>"; };
+		501A3E922130556900DF7E51 /* GWRoleDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GWRoleDataManager.m; sourceTree = "<group>"; };
+		501A3E942130576700DF7E51 /* GWRoleDataInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GWRoleDataInfo.h; sourceTree = "<group>"; };
+		501A3E952130576700DF7E51 /* GWRoleDataInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GWRoleDataInfo.m; sourceTree = "<group>"; };
 		501EED3520B6E04D003FAD06 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		501EED3620B6E04D003FAD06 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		5028619820BC34D7006EABBA /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -143,6 +154,16 @@
 		506EBD27212EC49F002AD81D /* HLFWebVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLFWebVC.m; sourceTree = "<group>"; };
 		509CD30620C8CE1100D29595 /* iPadMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iPadMainViewController.h; sourceTree = "<group>"; };
 		509CD30720C8CE1100D29595 /* iPadMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPadMainViewController.m; sourceTree = "<group>"; };
+		50C563E821305B1600098FB2 /* RoleData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RoleData.plist; sourceTree = "<group>"; };
+		50C563EA2130623E00098FB2 /* RoleDataFormula.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoleDataFormula.h; sourceTree = "<group>"; };
+		50C563EB2130647C00098FB2 /* GWLoadingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GWLoadingVC.h; sourceTree = "<group>"; };
+		50C563EC2130647C00098FB2 /* GWLoadingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GWLoadingVC.m; sourceTree = "<group>"; };
+		50C563EF2131B94E00098FB2 /* EquipmentManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EquipmentManager.h; sourceTree = "<group>"; };
+		50C563F02131B94E00098FB2 /* EquipmentManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EquipmentManager.m; sourceTree = "<group>"; };
+		50C563F22131B96500098FB2 /* EquipmentManager+List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EquipmentManager+List.h"; sourceTree = "<group>"; };
+		50C563F32131B96500098FB2 /* EquipmentManager+List.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "EquipmentManager+List.m"; sourceTree = "<group>"; };
+		50C563F52131B9C500098FB2 /* PlateHelmet.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PlateHelmet.plist; sourceTree = "<group>"; };
+		50C563F72131BA0700098FB2 /* EquipmentHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EquipmentHeader.h; sourceTree = "<group>"; };
 		551BB02320BDBB520004E55B /* MainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainManager.h; sourceTree = "<group>"; };
 		551BB02420BDBB520004E55B /* MainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainManager.m; sourceTree = "<group>"; };
 		714641612C3BD83443100705 /* Pods-Easy-All 2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy-All 2.0.release.xcconfig"; path = "Pods/Target Support Files/Pods-Easy-All 2.0/Pods-Easy-All 2.0.release.xcconfig"; sourceTree = "<group>"; };
@@ -217,6 +238,54 @@
 				5018FBCE20DD45AC0083148E /* UIDeviceDefine.h */,
 			);
 			path = Define;
+			sourceTree = "<group>";
+		};
+		501A3E8C2130547000DF7E51 /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				501A3E8F2130552F00DF7E51 /* Manager */,
+				501A3E8E213054DA00DF7E51 /* CreateRole */,
+				501A3E8D213054B700DF7E51 /* Loading */,
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
+		501A3E8D213054B700DF7E51 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				50C563EB2130647C00098FB2 /* GWLoadingVC.h */,
+				50C563EC2130647C00098FB2 /* GWLoadingVC.m */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		501A3E8E213054DA00DF7E51 /* CreateRole */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CreateRole;
+			sourceTree = "<group>";
+		};
+		501A3E8F2130552F00DF7E51 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				50C563EE2131B92D00098FB2 /* Equipment */,
+				501A3E902130553900DF7E51 /* RoleData */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		501A3E902130553900DF7E51 /* RoleData */ = {
+			isa = PBXGroup;
+			children = (
+				501A3E912130556900DF7E51 /* GWRoleDataManager.h */,
+				501A3E922130556900DF7E51 /* GWRoleDataManager.m */,
+				501A3E942130576700DF7E51 /* GWRoleDataInfo.h */,
+				501A3E952130576700DF7E51 /* GWRoleDataInfo.m */,
+				50C563E821305B1600098FB2 /* RoleData.plist */,
+				50C563EA2130623E00098FB2 /* RoleDataFormula.h */,
+			);
+			path = RoleData;
 			sourceTree = "<group>";
 		};
 		501EED3420B6E033003FAD06 /* Main */ = {
@@ -368,6 +437,7 @@
 		505EF66E20C62F2F000700AE /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				501A3E8C2130547000DF7E51 /* Group */,
 				504B50832126634300514388 /* PhotoHanding */,
 				505EF66F20C62F4B000700AE /* Account */,
 				505EF68720C62F4B000700AE /* Tally */,
@@ -541,6 +611,19 @@
 			path = iPadMain;
 			sourceTree = "<group>";
 		};
+		50C563EE2131B92D00098FB2 /* Equipment */ = {
+			isa = PBXGroup;
+			children = (
+				50C563EF2131B94E00098FB2 /* EquipmentManager.h */,
+				50C563F02131B94E00098FB2 /* EquipmentManager.m */,
+				50C563F22131B96500098FB2 /* EquipmentManager+List.h */,
+				50C563F32131B96500098FB2 /* EquipmentManager+List.m */,
+				50C563F52131B9C500098FB2 /* PlateHelmet.plist */,
+				50C563F72131BA0700098FB2 /* EquipmentHeader.h */,
+			);
+			path = Equipment;
+			sourceTree = "<group>";
+		};
 		83266495931E1BBAE607A81D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -610,7 +693,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50C563F62131B9C500098FB2 /* PlateHelmet.plist in Resources */,
 				50448CF820B6DD0700E4FFD0 /* Assets.xcassets in Resources */,
+				50C563E921305B1600098FB2 /* RoleData.plist in Resources */,
 				5028619F20BC350E006EABBA /* MainList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -680,6 +765,7 @@
 				506A21B620EC62A20090C03C /* TimeViewController.m in Sources */,
 				50114175212ABFAB00504435 /* HLFPhotoLineView.m in Sources */,
 				505EF68E20C62F4B000700AE /* AccountManager.m in Sources */,
+				50C563F42131B96500098FB2 /* EquipmentManager+List.m in Sources */,
 				509CD30820C8CE1100D29595 /* iPadMainViewController.m in Sources */,
 				505EF6AB20C62F6C000700AE /* KVOViewController.m in Sources */,
 				505EF68C20C62F4B000700AE /* AccountInfo.m in Sources */,
@@ -690,10 +776,14 @@
 				504B507B2122C00E00514388 /* NSThreadViewController.m in Sources */,
 				505EF6A820C62F6C000700AE /* CopyViewController.m in Sources */,
 				505EF6AF20C62F9A000700AE /* KVCViewController.m in Sources */,
+				50C563ED2130647C00098FB2 /* GWLoadingVC.m in Sources */,
 				505EF6A620C62F6C000700AE /* SDImageViewController.m in Sources */,
 				505EF68D20C62F4B000700AE /* AccountManager+Edit.m in Sources */,
 				502A1DC0212A6703009A9069 /* UIView+subView.m in Sources */,
 				50448CFE20B6DD0700E4FFD0 /* main.m in Sources */,
+				50C563F12131B94E00098FB2 /* EquipmentManager.m in Sources */,
+				501A3E962130576700DF7E51 /* GWRoleDataInfo.m in Sources */,
+				501A3E932130556900DF7E51 /* GWRoleDataManager.m in Sources */,
 				505EF69220C62F4B000700AE /* AccountEditViewController.m in Sources */,
 				501EED3720B6E04D003FAD06 /* MainViewController.m in Sources */,
 				551BB02520BDBB520004E55B /* MainManager.m in Sources */,

@@ -74,6 +74,12 @@
 				<key>viewController</key>
 				<string>HLFPhotoHomeVC</string>
 			</dict>
+			<dict>
+				<key>name</key>
+				<string>GW</string>
+				<key>viewController</key>
+				<string>GWLoadingVC</string>
+			</dict>
 		</array>
 	</dict>
 </array>

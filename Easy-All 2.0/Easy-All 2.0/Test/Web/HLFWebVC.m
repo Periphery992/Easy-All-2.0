@@ -17,8 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
-    
+    NSString *homeDir = NSHomeDirectory();
+    DDLogVerbose(homeDir);
 }
 
 - (void)didReceiveMemoryWarning {
