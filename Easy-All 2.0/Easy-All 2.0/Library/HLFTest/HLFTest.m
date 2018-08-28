@@ -14,8 +14,11 @@
 {
     // Private API
     SEL sel = NSSelectorFromString([@"_perform" stringByAppendingString:@"MemoryWarning"]);
-    assert([[UIApplication sharedApplication] respondsToSelector:sel]);
-    [[UIApplication sharedApplication] performSelector:sel];
+    
+    if ([[UIApplication sharedApplication]respondsToSelector:sel])
+    {
+        [[UIApplication sharedApplication] performSelector:sel];
+    }
 }
 
 @end

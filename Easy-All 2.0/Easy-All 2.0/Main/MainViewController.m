@@ -69,7 +69,7 @@
     
     UIViewController *vc = [[NSClassFromString(bean.viewController) alloc]init];
     
-    if([bean.name isEqualToString:@"Tally"]||[bean.name isEqualToString:@"Account"]||[bean.name isEqualToString:@"Photo"])
+    if([bean.name isEqualToString:@"Tally"]||[bean.name isEqualToString:@"Account"]||[bean.name isEqualToString:@"Photo"]||[bean.name isEqualToString:@"GW"])
     {
         UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
         nav.tabBarItem.title = bean.name;
