@@ -247,7 +247,6 @@
 			isa = PBXGroup;
 			children = (
 				501A3E8F2130552F00DF7E51 /* Manager */,
-				501A3E8E213054DA00DF7E51 /* CreateRole */,
 				501A3E8D213054B700DF7E51 /* Loading */,
 			);
 			path = Group;
@@ -260,13 +259,6 @@
 				50C563EC2130647C00098FB2 /* GWLoadingVC.m */,
 			);
 			path = Loading;
-			sourceTree = "<group>";
-		};
-		501A3E8E213054DA00DF7E51 /* CreateRole */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CreateRole;
 			sourceTree = "<group>";
 		};
 		501A3E8F2130552F00DF7E51 /* Manager */ = {

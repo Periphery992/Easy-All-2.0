@@ -12,6 +12,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface GWRoleDataManager : NSObject
+@property (nonatomic, strong, readonly) NSDictionary *dicRoleData;
+
++ (instancetype)sharedInstance;
 
 @end
 

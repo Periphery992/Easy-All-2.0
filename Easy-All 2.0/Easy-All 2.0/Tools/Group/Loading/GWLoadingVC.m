@@ -20,7 +20,7 @@
     
     for (int i = 1; i <= 40; i++)
     {
-        GWRoleDataInfo *roleInfo = [[GWRoleDataInfo alloc]initWithRoleClass:GWRoleClassPaladin_Retribution level:i];
+        GWRoleDataInfo *roleInfo = [[GWRoleDataInfo alloc]initWithRoleClass:GWRoleClassPaladin_Retribution level:i allRoleBaseDic:[GWRoleDataManager sharedInstance].dicRoleData];
         DDLogVerbose(@"%@",roleInfo);
     }
     
