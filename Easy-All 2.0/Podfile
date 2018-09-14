@@ -5,7 +5,8 @@ target 'Easy-All 2.0' do
   pod 'Masonry',  '1.1.0'
   pod 'MJExtension', '3.0.13'
   pod 'SDWebImage', '4.3.3'
-
+  pod 'AFNetworking', '3.2.1'
+  pod 'FMDB', '2.7.2'
 
   pod 'HLFUIImageExtension', '0.1.1'
   pod 'HLFDDLog', '0.0.2'

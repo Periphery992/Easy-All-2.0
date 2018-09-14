@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>E00000001</key>
+	<dict>
+		<key>experiences</key>
+		<string>10</string>
+		<key>hitRate</key>
+		<string>0.9</string>
+		<key>attackInterval</key>
+		<integer>2</integer>
+		<key>criticalBonus</key>
+		<real>1.5</real>
+		<key>criticalStrike</key>
+		<real>0.1</real>
+		<key>defense</key>
+		<integer>30</integer>
+		<key>attack</key>
+		<integer>40</integer>
+		<key>health</key>
+		<integer>150</integer>
+		<key>level</key>
+		<integer>1</integer>
+		<key>name</key>
+		<string>Boar</string>
+	</dict>
+</dict>
+</plist>

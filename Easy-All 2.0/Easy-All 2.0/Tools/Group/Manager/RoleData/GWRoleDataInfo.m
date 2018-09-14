@@ -7,7 +7,6 @@
 //
 
 #import "GWRoleDataInfo.h"
-#import "RoleDataFormula.h"
 
 @interface GWRoleDataInfo (){}
 
@@ -23,7 +22,6 @@
 {
     if (self = [super init])
     {
-        
         NSDictionary *roleBaseDic = [allRoleBaseDic objectForKey:[NSString stringWithFormat:@"%zi",roleClass]];
         
         NSInteger iHealth_base = [[roleBaseDic objectForKey:@"health_base"] integerValue];
@@ -32,18 +30,16 @@
         NSInteger iEnergy_growth = [[roleBaseDic objectForKey:@"energy_growth"] integerValue];
         NSInteger iAttack_base = [[roleBaseDic objectForKey:@"attack_base"] integerValue];
         NSInteger iAttack_growth = [[roleBaseDic objectForKey:@"attack_growth"] integerValue];
-        CGFloat iCriticalStrike_base = [[roleBaseDic objectForKey:@"criticalStrike_base"] floatValue];
-        CGFloat iCriticalBonus_base = [[roleBaseDic objectForKey:@"criticalBonus_base"] floatValue];
-        CGFloat iAttackInterval_base = [[roleBaseDic objectForKey:@"attackInterval_base"] floatValue];
         
         self.roleClass = roleClass;
         self.level = level;
         self.health = TAG_HEALTH_FORMULA;
         self.energy = TAG_ENERGY_FORMULA;
         self.attack = TAG_ATTACK_FORMULA;
-        self.criticalStrike = iCriticalStrike_base;
-        self.criticalBonus = iCriticalBonus_base;
-        self.attackInterval = iAttackInterval_base;
+        self.criticalStrike = [[roleBaseDic objectForKey:@"criticalStrike_base"] floatValue];
+        self.criticalBonus = [[roleBaseDic objectForKey:@"criticalBonus_base"] floatValue];
+        self.attackInterval = [[roleBaseDic objectForKey:@"attackInterval_base"] floatValue];
+        self.hitRate = [[roleBaseDic objectForKey:@"hitRate_base"] floatValue];
     }
     
     return self;

@@ -25,33 +25,26 @@
     return _sharedInstance;
 }
 
-- (instancetype)init
+#pragma mark - GET/SET
+- (NSDictionary *)dicRoleData
 {
-    if (self = [super init])
+    if (!_dicRoleData)
     {
-        self.dicRoleData = [NSDictionary dictionary];
-        
-        NSFileManager *fileManager = [NSFileManager defaultManager];
-        
-        NSString *path = [[NSBundle mainBundle]pathForResource:@"RoleData" ofType:@"plist"];
-        
-        if ([fileManager fileExistsAtPath:path])
-        {
-            NSData *data = [fileManager contentsAtPath:path];
+        _dicRoleData = ({
             
-            if (data.length > 0)
+            NSDictionary *dictinary = [NSDictionary dictionary];
+            NSString *path = [[NSBundle mainBundle]pathForResource:@"RoleData" ofType:@"plist"];
+            
+            NSFileManager *fileManager = [NSFileManager defaultManager];
+            if ([fileManager fileExistsAtPath:path])
             {
-                
-                NSString *receiveStr = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-                self.dicRoleData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-                
-                DDLogInfo(@"%@",receiveStr);
+                dictinary = [[NSDictionary alloc]initWithContentsOfFile:path];
             }
-        }
+            
+            dictinary;
+        });
     }
-    
-    return self;
+    return _dicRoleData;
 }
-
 
 @end

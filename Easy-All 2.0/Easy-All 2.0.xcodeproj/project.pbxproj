@@ -27,6 +27,8 @@
 		504B50802123FB8200514388 /* HLFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 504B507F2123FB8200514388 /* HLFViewController.m */; };
 		504B50882126639300514388 /* HLFPhotoHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 504B50872126639300514388 /* HLFPhotoHomeVC.m */; };
 		504B508B212663AA00514388 /* HLFPhotoEditVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 504B508A212663AA00514388 /* HLFPhotoEditVC.m */; };
+		505D913621480F6700864342 /* GWCreateRoleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 505D913521480F6700864342 /* GWCreateRoleVC.m */; };
+		505D913A21481B5B00864342 /* GWCreateRoleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 505D913921481B5B00864342 /* GWCreateRoleView.m */; };
 		505EF68B20C62F4B000700AE /* AccountCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF67220C62F4B000700AE /* AccountCellInfo.m */; };
 		505EF68C20C62F4B000700AE /* AccountInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF67420C62F4B000700AE /* AccountInfo.m */; };
 		505EF68D20C62F4B000700AE /* AccountManager+Edit.m in Sources */ = {isa = PBXBuildFile; fileRef = 505EF67620C62F4B000700AE /* AccountManager+Edit.m */; };
@@ -52,6 +54,9 @@
 		506EBD24212EC062002AD81D /* HLFTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 506EBD23212EC062002AD81D /* HLFTest.m */; };
 		506EBD28212EC49F002AD81D /* HLFWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 506EBD27212EC49F002AD81D /* HLFWebVC.m */; };
 		506EBD2F212FF0D0002AD81D /* HLFRunLoopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 506EBD2E212FF0D0002AD81D /* HLFRunLoopVC.m */; };
+		5098ABD0213D89B2004E90EA /* EnemyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5098ABCF213D89B2004E90EA /* EnemyManager.m */; };
+		5098ABD2213D8A54004E90EA /* EnemyData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5098ABD1213D8A54004E90EA /* EnemyData.plist */; };
+		5098ABD4213D8CED004E90EA /* RoleUpgrade.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5098ABD3213D8CED004E90EA /* RoleUpgrade.plist */; };
 		509CD30820C8CE1100D29595 /* iPadMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 509CD30720C8CE1100D29595 /* iPadMainViewController.m */; };
 		50C563E921305B1600098FB2 /* RoleData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50C563E821305B1600098FB2 /* RoleData.plist */; };
 		50C563ED2130647C00098FB2 /* GWLoadingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C563EC2130647C00098FB2 /* GWLoadingVC.m */; };
@@ -105,6 +110,10 @@
 		504B50872126639300514388 /* HLFPhotoHomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLFPhotoHomeVC.m; sourceTree = "<group>"; };
 		504B5089212663AA00514388 /* HLFPhotoEditVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLFPhotoEditVC.h; sourceTree = "<group>"; };
 		504B508A212663AA00514388 /* HLFPhotoEditVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLFPhotoEditVC.m; sourceTree = "<group>"; };
+		505D913421480F6700864342 /* GWCreateRoleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GWCreateRoleVC.h; sourceTree = "<group>"; };
+		505D913521480F6700864342 /* GWCreateRoleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GWCreateRoleVC.m; sourceTree = "<group>"; };
+		505D913821481B5B00864342 /* GWCreateRoleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GWCreateRoleView.h; sourceTree = "<group>"; };
+		505D913921481B5B00864342 /* GWCreateRoleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GWCreateRoleView.m; sourceTree = "<group>"; };
 		505EF67120C62F4B000700AE /* AccountCellInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountCellInfo.h; sourceTree = "<group>"; };
 		505EF67220C62F4B000700AE /* AccountCellInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountCellInfo.m; sourceTree = "<group>"; };
 		505EF67320C62F4B000700AE /* AccountInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountInfo.h; sourceTree = "<group>"; };
@@ -155,10 +164,13 @@
 		506EBD27212EC49F002AD81D /* HLFWebVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLFWebVC.m; sourceTree = "<group>"; };
 		506EBD2D212FF0D0002AD81D /* HLFRunLoopVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLFRunLoopVC.h; sourceTree = "<group>"; };
 		506EBD2E212FF0D0002AD81D /* HLFRunLoopVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLFRunLoopVC.m; sourceTree = "<group>"; };
+		5098ABCE213D89B2004E90EA /* EnemyManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnemyManager.h; sourceTree = "<group>"; };
+		5098ABCF213D89B2004E90EA /* EnemyManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnemyManager.m; sourceTree = "<group>"; };
+		5098ABD1213D8A54004E90EA /* EnemyData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = EnemyData.plist; sourceTree = "<group>"; };
+		5098ABD3213D8CED004E90EA /* RoleUpgrade.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RoleUpgrade.plist; sourceTree = "<group>"; };
 		509CD30620C8CE1100D29595 /* iPadMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iPadMainViewController.h; sourceTree = "<group>"; };
 		509CD30720C8CE1100D29595 /* iPadMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPadMainViewController.m; sourceTree = "<group>"; };
 		50C563E821305B1600098FB2 /* RoleData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RoleData.plist; sourceTree = "<group>"; };
-		50C563EA2130623E00098FB2 /* RoleDataFormula.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoleDataFormula.h; sourceTree = "<group>"; };
 		50C563EB2130647C00098FB2 /* GWLoadingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GWLoadingVC.h; sourceTree = "<group>"; };
 		50C563EC2130647C00098FB2 /* GWLoadingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GWLoadingVC.m; sourceTree = "<group>"; };
 		50C563EF2131B94E00098FB2 /* EquipmentManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EquipmentManager.h; sourceTree = "<group>"; };
@@ -246,6 +258,7 @@
 		501A3E8C2130547000DF7E51 /* Group */ = {
 			isa = PBXGroup;
 			children = (
+				505D913321480F4500864342 /* CreateRole */,
 				501A3E8F2130552F00DF7E51 /* Manager */,
 				501A3E8D213054B700DF7E51 /* Loading */,
 			);
@@ -264,6 +277,7 @@
 		501A3E8F2130552F00DF7E51 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				5098ABCD213D899F004E90EA /* Enemy */,
 				50C563EE2131B92D00098FB2 /* Equipment */,
 				501A3E902130553900DF7E51 /* RoleData */,
 			);
@@ -278,7 +292,7 @@
 				501A3E942130576700DF7E51 /* GWRoleDataInfo.h */,
 				501A3E952130576700DF7E51 /* GWRoleDataInfo.m */,
 				50C563E821305B1600098FB2 /* RoleData.plist */,
-				50C563EA2130623E00098FB2 /* RoleDataFormula.h */,
+				5098ABD3213D8CED004E90EA /* RoleUpgrade.plist */,
 			);
 			path = RoleData;
 			sourceTree = "<group>";
@@ -412,6 +426,25 @@
 				504B508A212663AA00514388 /* HLFPhotoEditVC.m */,
 			);
 			path = Edit;
+			sourceTree = "<group>";
+		};
+		505D913321480F4500864342 /* CreateRole */ = {
+			isa = PBXGroup;
+			children = (
+				505D9137214815F100864342 /* View */,
+				505D913421480F6700864342 /* GWCreateRoleVC.h */,
+				505D913521480F6700864342 /* GWCreateRoleVC.m */,
+			);
+			path = CreateRole;
+			sourceTree = "<group>";
+		};
+		505D9137214815F100864342 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				505D913821481B5B00864342 /* GWCreateRoleView.h */,
+				505D913921481B5B00864342 /* GWCreateRoleView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		505EF66D20C62EFA000700AE /* Test */ = {
@@ -607,6 +640,16 @@
 			path = RunLoop;
 			sourceTree = "<group>";
 		};
+		5098ABCD213D899F004E90EA /* Enemy */ = {
+			isa = PBXGroup;
+			children = (
+				5098ABD1213D8A54004E90EA /* EnemyData.plist */,
+				5098ABCE213D89B2004E90EA /* EnemyManager.h */,
+				5098ABCF213D89B2004E90EA /* EnemyManager.m */,
+			);
+			path = Enemy;
+			sourceTree = "<group>";
+		};
 		509CD30520C8CDFB00D29595 /* iPadMain */ = {
 			isa = PBXGroup;
 			children = (
@@ -648,8 +691,6 @@
 				50448CE720B6DD0700E4FFD0 /* Sources */,
 				50448CE820B6DD0700E4FFD0 /* Frameworks */,
 				50448CE920B6DD0700E4FFD0 /* Resources */,
-				E5FA5C11BAE075ED3E48B13A /* [CP] Embed Pods Frameworks */,
-				941C2EC71CAC07AC13CC7302 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -699,7 +740,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				50C563F62131B9C500098FB2 /* PlateHelmet.plist in Resources */,
+				5098ABD4213D8CED004E90EA /* RoleUpgrade.plist in Resources */,
 				50448CF820B6DD0700E4FFD0 /* Assets.xcassets in Resources */,
+				5098ABD2213D8A54004E90EA /* EnemyData.plist in Resources */,
 				50C563E921305B1600098FB2 /* RoleData.plist in Resources */,
 				5028619F20BC350E006EABBA /* MainList.plist in Resources */,
 			);
@@ -708,21 +751,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		941C2EC71CAC07AC13CC7302 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Easy-All 2.0/Pods-Easy-All 2.0-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AA925041A7B9D81FFFA75FF7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -739,21 +767,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E5FA5C11BAE075ED3E48B13A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Easy-All 2.0/Pods-Easy-All 2.0-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -781,6 +794,7 @@
 				504B507B2122C00E00514388 /* NSThreadViewController.m in Sources */,
 				505EF6A820C62F6C000700AE /* CopyViewController.m in Sources */,
 				505EF6AF20C62F9A000700AE /* KVCViewController.m in Sources */,
+				505D913A21481B5B00864342 /* GWCreateRoleView.m in Sources */,
 				50C563ED2130647C00098FB2 /* GWLoadingVC.m in Sources */,
 				505EF6A620C62F6C000700AE /* SDImageViewController.m in Sources */,
 				505EF68D20C62F4B000700AE /* AccountManager+Edit.m in Sources */,
@@ -796,6 +810,7 @@
 				506EBD24212EC062002AD81D /* HLFTest.m in Sources */,
 				5028619E20BC350E006EABBA /* MainToolBean.m in Sources */,
 				505EF69420C62F4B000700AE /* AccountHomeViewController.m in Sources */,
+				5098ABD0213D89B2004E90EA /* EnemyManager.m in Sources */,
 				50114179212AD1F300504435 /* HLFPhotoOperationBar.m in Sources */,
 				505EF69020C62F4B000700AE /* AccountEditNormalCell.m in Sources */,
 				505EF69320C62F4B000700AE /* AccountTypeViewController.m in Sources */,
@@ -806,6 +821,7 @@
 				506EBD2F212FF0D0002AD81D /* HLFRunLoopVC.m in Sources */,
 				506EBD1A212E5398002AD81D /* HLFRGBPoint.m in Sources */,
 				503D05AA212ABEF600A5308B /* HLFPhotoStitchVC.m in Sources */,
+				505D913621480F6700864342 /* GWCreateRoleVC.m in Sources */,
 				50114174212ABFAB00504435 /* HLFImageProcessorView.m in Sources */,
 				50114173212ABFAB00504435 /* HLFImageCVCell.m in Sources */,
 				506EBD1D212E53DA002AD81D /* HLFCheckImage.m in Sources */,

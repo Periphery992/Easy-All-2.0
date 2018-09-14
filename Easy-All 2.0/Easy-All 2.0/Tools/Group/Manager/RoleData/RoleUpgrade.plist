@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>U00000001</key>
+	<integer>100</integer>
+	<key>U00000002</key>
+	<integer>200</integer>
+	<key>U00000003</key>
+	<integer>300</integer>
+	<key>U00000004</key>
+	<integer>500</integer>
+	<key>U00000005</key>
+	<integer>800</integer>
+	<key>U00000006</key>
+	<integer>1300</integer>
+	<key>U00000007</key>
+	<integer>2100</integer>
+	<key>U00000008</key>
+	<integer>3400</integer>
+	<key>U00000009</key>
+	<integer>5500</integer>
+	<key>U00000010</key>
+	<integer>8900</integer>
+	<key>U00000011</key>
+	<integer>14400</integer>
+</dict>
+</plist>
